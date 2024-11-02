@@ -1,5 +1,5 @@
 project:
-  name: "quarto-article"
+  name: "version-control-course-concept"
   title: "Quarto Article"
   subtitle: "A personal template for Quarto articles"
   source: "https://github.com/lnnrtwttkhn/{{< var project.name >}}"

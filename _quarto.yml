@@ -73,7 +73,7 @@ format:
     code-copy: true
     code-link: false
     code-tools:
-      source: "https://github.com/lnnrtwttkhn/quarto-article"
+      source: "https://github.com/lnnrtwttkhn/version-control-course-concept"
       toggle: true
       caption: "Code"
     # links:

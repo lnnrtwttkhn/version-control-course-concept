@@ -1,7 +1,7 @@
 # Quarto Article
 
-[![Quarto Publish](https://github.com/lnnrtwttkhn/quarto-article/actions/workflows/publish.yml/badge.svg)](https://github.com/lnnrtwttkhn/quarto-article/actions/workflows/publish.yml)
-[![Codespell](https://github.com/lnnrtwttkhn/quarto-article/actions/workflows/codespell.yml/badge.svg)](https://github.com/lnnrtwttkhn/quarto-article/actions/workflows/codespell.yml)
+[![Quarto Publish](https://github.com/lnnrtwttkhn/version-control-course-concept/actions/workflows/publish.yml/badge.svg)](https://github.com/lnnrtwttkhn/version-control-course-concept/actions/workflows/publish.yml)
+[![Codespell](https://github.com/lnnrtwttkhn/version-control-course-concept/actions/workflows/codespell.yml/badge.svg)](https://github.com/lnnrtwttkhn/version-control-course-concept/actions/workflows/codespell.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## About
