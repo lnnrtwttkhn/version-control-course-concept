@@ -28,6 +28,11 @@ Complementing this resource, we created quizzes and exercises, and shared all ma
 
 Studierendenzentrierung (z.B. aktive Beteiligung und Auseinandersetzung fördern, Selbststudium anregen, motivieren, Mitgestaltung ermöglichen), Lehrkompetenz (z.B. verständliches Vermitteln, Engagement, Fachkompetenz), Verbindung von Wissenschaftlichkeit und Praxisbezug, Aktualität und Innovationsgrad, forschendes Lernen, kritisches Denken anregen, Feedback-Kultur, Gleichstellungsförderung, Binnendifferenzierung, Interdisziplinarität, Internationalisierung, Medieneinsatz, Evaluationsergebnisse.
 
+**Internationalisierung**: Alle Kursmaterialien (Website, Book, Slides) sind auf English.
+Mit Förderung der Uni Hamburg findet die dritte Version des Kurses als eine internationale teaching collaboration between the university of Hamburg and Erasmus University Rotterdam statt.
+Die Website-Nutzung zeigt 100.000 Nutzende aus über 30 Ländern (Bild im Anhang).
+
+
 Fully open-source
 
 Modularity 
