@@ -26,11 +26,19 @@ Complementing this resource, we created quizzes and exercises, and shared all ma
 
 ## Reference to teaching award criteria
 
-Studierendenzentrierung (z.B. aktive Beteiligung und Auseinandersetzung fördern, Selbststudium anregen, motivieren, Mitgestaltung ermöglichen), Lehrkompetenz (z.B. verständliches Vermitteln, Engagement, Fachkompetenz), Verbindung von Wissenschaftlichkeit und Praxisbezug, Aktualität und Innovationsgrad, forschendes Lernen, kritisches Denken anregen, Feedback-Kultur, Gleichstellungsförderung, Binnendifferenzierung, Interdisziplinarität, Internationalisierung, Medieneinsatz, Evaluationsergebnisse.
+Studierendenzentrierung (z.B. aktive Beteiligung und Auseinandersetzung fördern, Selbststudium anregen, motivieren, Mitgestaltung ermöglichen), Lehrkompetenz (z.B. verständliches Vermitteln, Engagement, Fachkompetenz), Verbindung von Wissenschaftlichkeit und Praxisbezug, Aktualität und Innovationsgrad, forschendes Lernen, kritisches Denken anregen, Feedback-Kultur, Gleichstellungsförderung, Binnendifferenzierung, Interdisziplinarität,, Medieneinsatz, Evaluationsergebnisse.
+
+Studierendenzentrierung: Students can study the materials at their own pace. Learning can take place at any time point.
+Given that the technical tools used to develop the course materials (mainly Git and Quarto) are also taught in the course, students are enabled to directly contribute to the course materials.
+For example, students provide feedback by opening Issues in the course repo and one student even provided a fix for a typo that he discovered during the course using the principles conveyed in the course.
+
 
 **Internationalisierung**: Alle Kursmaterialien (Website, Book, Slides) sind auf English.
 Mit Förderung der Uni Hamburg findet die dritte Version des Kurses als eine internationale teaching collaboration between the university of Hamburg and Erasmus University Rotterdam statt.
 Die Website-Nutzung zeigt 100.000 Nutzende aus über 30 Ländern (Bild im Anhang).
+
+Project relies on open-source tools itself (mainly Git, Quarto and formR).
+Quarto as a modern framework also uses several features that improve accessibility of materials for people with visual or hearing impairments.
 
 
 Fully open-source
