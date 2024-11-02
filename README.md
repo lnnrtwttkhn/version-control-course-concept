@@ -34,4 +34,4 @@ Just click the green **Use this template** button to get started.
 
 ## Contributors
 
-[Lennart Wittkuhn](mailto:lennart.wittkuhn@tutanota.com)
+[Lennart Wittkuhn](mailto:lennart.wittkuhn@uni-hamburg.de)
