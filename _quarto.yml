@@ -19,8 +19,6 @@ author:
     corresponding: true
   affiliations:
     - ref: uhh-psych
-    - ref: mpib
-    - ref: mps-ucl
 
 # table of contents:
 toc-depth: 3
