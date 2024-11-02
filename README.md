@@ -2,7 +2,7 @@
 
 [![Quarto Publish](https://github.com/lnnrtwttkhn/version-control-course-concept/actions/workflows/publish.yml/badge.svg)](https://github.com/lnnrtwttkhn/version-control-course-concept/actions/workflows/publish.yml)
 [![Codespell](https://github.com/lnnrtwttkhn/version-control-course-concept/actions/workflows/codespell.yml/badge.svg)](https://github.com/lnnrtwttkhn/version-control-course-concept/actions/workflows/codespell.yml)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![License: CC BY 4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 
 ## About
 
@@ -30,7 +30,7 @@ Just click the green **Use this template** button to get started.
 
 ## License
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![License: CC BY 4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 
 ## Contributors
 
