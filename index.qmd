@@ -6,3 +6,39 @@ engine: knitr
 abstract: "This is the abstract."
 abstract-title: "Abstract"
 ---
+
+## Concept of the course
+
+### Content
+
+In this age of computational and data-driven science, it is essential for researchers to track the evolution of digital objects like code and data for reproducible research and effective collaboration.
+
+crucially addressing the reproducibility crisis prevalent in many research fields, especially in Psychology [@obels2020; @hardwicke2021; @crüwell2023].
+Still, chaotic workflows are pervasive in science, reflecting a lack of training in tools and practices from software engineering and scientific computing that provide established solutions for collaborative digital workflows [@koroshetz2020].
+Addressing these challenges, we introduced the full-semester seminar "{{< var project.title >}}", in the Psychology M.Sc. program at University of Hamburg.
+
+### Structure
+
+### Didactic methods
+
+At the heart of the course is the "Version Control Book", a dynamic online learning resource that covers essential concepts of version control in scientific settings.
+Complementing this resource, we created quizzes and exercises, and shared all materials on GitHub as extendable, open educational resources.
+
+## Reference to teaching award criteria
+
+Studierendenzentrierung (z.B. aktive Beteiligung und Auseinandersetzung fördern, Selbststudium anregen, motivieren, Mitgestaltung ermöglichen), Lehrkompetenz (z.B. verständliches Vermitteln, Engagement, Fachkompetenz), Verbindung von Wissenschaftlichkeit und Praxisbezug, Aktualität und Innovationsgrad, forschendes Lernen, kritisches Denken anregen, Feedback-Kultur, Gleichstellungsförderung, Binnendifferenzierung, Interdisziplinarität, Internationalisierung, Medieneinsatz, Evaluationsergebnisse.
+
+Fully open-source
+
+Modularity 
+
+Website Analytics
+
+# Appendix
+
+## Acknowledgements
+
+## References
+
+:::{#refs}
+:::
