@@ -31,7 +31,24 @@ Studierendenzentrierung (z.B. aktive Beteiligung und Auseinandersetzung fördern
 Studierendenzentrierung: Students can study the materials at their own pace. Learning can take place at any time point.
 Given that the technical tools used to develop the course materials (mainly Git and Quarto) are also taught in the course, students are enabled to directly contribute to the course materials.
 For example, students provide feedback by opening Issues in the course repo and one student even provided a fix for a typo that he discovered during the course using the principles conveyed in the course.
+Die Studierenden setzen sich aktiv mit den Lehrmaterialien auseinander, indem sie in jeder Sitzung konkrete Übungen umsetzen.
+Das Version CTRL Brooke ermöglicht Asynchrones und eigenständiges Selbststudium. Auch die Aufgaben und Quiz. Es können nach eigenem Lernstand im Tempo auch außerhalb Der Seminar Zeit bearbeitet werden.
+Mitgestaltung wird auf mehreren Ebenen ermöglicht: abgesehen davon, dass die Studierenden zu jederzeit die Möglichkeit haben, mit Fragen und Anmerkungen den weiteren Verlauf des Seminars anzupassen, werden in dem Kurs auch die Tools gelehrt (git und Quarto) mit denen auch die Lehrmaterialien erstellt werden. Da alle Materialien Open Source sind, werden die Studierenden befähigt, direkt die Lehrmaterialien zu verändern und zu erweitern.
 
+Lehrkompetenz.
+
+**Verbindung von Wissenschaftlichkeit und Praxisbezug.** Das Seminar vermittelt praktische Kenntnisse in Versionskontrolle mit Git, ein Tool, dass in der Wissenschaft immer größere Bedeutung gewinnt.
+Darüber hinaus werden den Studierenden theoretische Hintergründe zu Themen wie Reproduzierbarkeit, gutes wissenschaftliches Arbeiten und Best-Practices im Umgang mit Programmiercode und Forschungsdaten vermittelt.
+Diese Kenntnisse gewinnen nicht mehr in der psychologischen Forschung. Immer größere Relevanz, sondern sind auch im weiteren potentiellen Berufsfeldern, in denen dann getriebene Entscheidung getroffen werden von Relevanz.
+
+**Aktualität und Innovationsgrad**. Vor dem Hintergrund der Reproduzierbarkeitskrise, insbesondere in der psychologischen Forschung, hat das Seminar des Studierenden, ein transparenten und nachvollziehbaren Arbeitsweise näher bringt, dringliche Aktualität. Der Innovationsgrad spiegelt sich nicht nur in der Thematik, sondern auch in der Umsetzung des Seminars wieder.
+Alle Lehrmaterialien sind Open Source education resources, die mithilfe von cutting edge tools und den gleichen Prinzipien dem Seminar vermittelt, werden umgesetzt werden.
+Das Seminar verfolgt den Ansatz von Walking in die OP bei dem von der Initialen Idee zur konkreten Umsetzung im Programmiercode der gesamte Prozess, transparent und Kollaborativ gestaltet wird.
+
+**forschendes Lernen, kritisches Denken anregen** Das Seminarkonzept ist inspiriert durch den Ansatz des ScholarShip of teaching, Der die Lehre mit einem falschen Blick konzipiert und reflektiert. Ein umfangreicher Fragebogen zu Beginn des Seminars ermöglicht Vorkenntnisse, Motivation, Befürchtungen und Wünsche der Studierenden systematisch zu erfassen. In etwa jede zweite Sitzung wird der Kenntnisstand der Studierenden Zu wichtigen Konzepten des Seminars überprüft. Die systematische Versionierung alle Lehr und Lernressourcen,  ermöglicht es dann selbst im Nachhinein Zusammenhänge zwischen dem fachlichen Kenntnisstand der Studierenden und der Aufbereitung der Lehrmaterialien herzustellen. In Kombination mit der Analyse von Webanalyticsdaten, können so datengetriebene Verbesserungen abgeleitet werden, die die Weiterentwicklung der Lernressourcen und didaktischen Konzept informieren.
+Auf Seiten der Studierenden werden wissenschaftliche Arbeitsweisen, vor allem in Hinblick auf Transparenz, Effektivität und Kollaboration kritisch hinterfragt.
+
+**Feedback-Kultur**
 
 **Internationalisierung**: Alle Kursmaterialien (Website, Book, Slides) sind auf English.
 Mit Förderung der Uni Hamburg findet die dritte Version des Kurses als eine internationale teaching collaboration between the university of Hamburg and Erasmus University Rotterdam statt.
