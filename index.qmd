@@ -52,27 +52,12 @@ In addition, we collect web analytics data from all course-related websites usin
 This allows us not only to monitor the global use of our open educational resources but also to analyze online interactions with the websites and learning contents.
 A course [mailing list]({{< links.mailing-list >}}) is used to send announcements but also allows students to exchange via email outside of class time.
 
-Beyond these more technical elements, we also pay attention to social aspects of the learning experience.
-We aim to foster a welcoming learning environment and participants have to abide to a [code of conduct](({{< links.code-of-conduct >}}).
-We emphasize collaborative learning through the exercises 
-Recognizing student's work load, course content is designed to be mostly covered during class time.
-It's easy to catch up, because all materials are available and tasks (including example solutions) clearly described.
-Quarto: accessibility
-
 ## Reference to teaching award criteria
 
-[teaching award criteria](#teaching-award-criteria)
-
 **Student centering.**
-As the majority of class time is dedicated to hands-on exercises, **active participation and engagement** is the essential component of the course.
-Since all materials (course website, online textbook) are openly available, asynchronous **self-study** is enabled, allowing students to review course content, complete assignments, and take quizzes at their own level and pace, even outside scheduled class times.
+As the majority of class time is dedicated to hands-on exercises, active participation and engagement is the essential component of the course.
+Since all materials (course website, online textbook) are openly available, asynchronous self-study is enabled, allowing students to review course content, complete assignments, and take quizzes at their own level and pace, even outside scheduled class times.
 Even during class, students can engage with the study materials and exercises in their preferred learning style.
-Opportunities for **contribution** are provided on several levels: not only can students influence the seminar's progression through questions and feedback at any time, but the course also teaches the tools (primarily [Git]({{< links.git >}}), [GitHub]({{< links.github >}}), and [Quarto]({{< links.quarto >}})) used to create the course materials.
-Since all materials are open-source, students are **motivated** to contribute directly to the resources themselves.
-As two concrete examples, students [provided feedback via GitHub](https://github.com/lnnrtwttkhn/version-control-course-uhh-ss24/issues?q=label%3Afeedback) and one student directly [fixed a typo in the Version Control Book](https://github.com/lnnrtwttkhn/version-control-book/pull/200).
-
-
- **teaching skills** (e.g. understandable communication, commitment, professional competence)
 
 **Connection of scientific and practical relevance.**
 The seminar connects theoretical knowledge and practical skills by providing hands-on training in version control with Git, a tool that is becoming increasingly important in academic research.
@@ -85,7 +70,7 @@ The innovative nature of the seminar is reflected not only in its subject matter
 All teaching materials are open-source educational resources, developed using cutting-edge tools and the same principles that are taught in the seminar.
 The seminar follows the "working in the open" approach, where the entire process - from the initial idea to the concrete implementation in programming code - is designed to be transparent and collaborative.
 
-**Promoting Research-Based Learning and Critical Thinking.**
+**Promoting of research-based learning and critical thinking.**
 The seminar concept is inspired by the approach of the Scholarship of Teaching, which designs and reflects on teaching practices from a reflective perspective.
 A comprehensive questionnaire at the start of the seminar systematically captures students' prior knowledge, motivation, concerns, and expectations.
 About every other session, students' understanding of key concepts is assessed.
@@ -93,9 +78,17 @@ The systematic versioning of all teaching and learning resources allows connecti
 Combined with the analysis of web analytics data, this enables data-driven improvements that inform the ongoing development of learning resources and teaching strategies.
 From the students' side, current scientific conduct - particularly with regard to transparency, effectiveness, and collaboration - are critically examined and questioned.
 
+**Feedback Culture.**
+Opportunities for contribution are provided on several levels: not only can students influence the seminar's progression through questions and feedback at any time, but the course also teaches the tools (primarily [Git]({{< links.git >}}), [GitHub]({{< links.github >}}), and [Quarto]({{< links.quarto >}})) used to create the course materials.
+Since all materials are open-source, students are motivated to contribute directly to the resources themselves.
+As two concrete examples, students [provided feedback via GitHub](https://github.com/lnnrtwttkhn/version-control-course-uhh-ss24/issues?q=label%3Afeedback) and one student directly [fixed a typo in the Version Control Book](https://github.com/lnnrtwttkhn/version-control-book/pull/200), demonstrating the principles conveyed in the course.
 
-**Feedback-Kultur**
-
+**Promotion of equality**.
+Beyond technical elements, we focus on the social aspects of the learning experience, fostering a welcoming environment where participants must adhere to a [code of conduct]({{< links.code-of-conduct >}}).
+Collaborative learning is emphasized through exercises.
+Recognizing student's work load, course content is structured to be largely covered during class time
+All materials and tasks (including example solutions) are clearly described, making it easy to catch up.
+Additionally, Quarto's modern technical framework includes features that improve accessibility for individuals with visual or hearing impairments (for example, alternative text for images, hyperlegible font and auditory cues during slide progression).
 
 **Internal Differentiation.**
 Differentiation is achieved by allowing students to independently study the learning materials at their own pace.
@@ -104,17 +97,20 @@ Additionally, the concept of pair programming is implemented, where students sup
 Advanced students have the chance to share their knowledge with others, reinforcing their own understanding while taking on the role of a teacher.
 The tasks are consistently divided into mandatory and optional components.
 The mandatory tasks are designed to be achievable by all students, while the optional exercises provide opportunities for a deeper engagement with the content.
+The chapters of the Version Control Book are designed to be completed during class, with expandable sections and cross-references that provide additional background knowledge for further exploration.
 
 **Internationalization.**
 All course materials (website, book, slides) are available in English.
 With support from the University of Hamburg, the third version of the course is being held as an international teaching collaboration between the University of Hamburg and Erasmus University Rotterdam.
 The website usage data shows 100,000 users from over 30 countries (see image attached).
 
-
-Project relies on open-source tools itself (mainly Git, Quarto and formR).
-Quarto as a modern framework also uses several features that improve accessibility of materials for people with visual or hearing impairments.
-
-Fully open-source
+**Media use.**
+While the course materials focus on *digital media* stellen sie eine breite auswahl an lernressourcen bereit.
+Von der Kurs-Website mit Slides über das umfangreiche Version Control Book, gibt es auch Quizzes.
+The course material are fully open-source and rely on open-source tools, providng high potential for Interoperabilkity and Reusabikut, central elements of the FAIR principles.
+In addition, major releases of the materials are tagged, annotated with metadata, and archived in repositories like Zenodo, ensuring long-term accessibility.
+Our course thereby exemplifies an approach to the FAIR, reproducible and collaborative development of edicational materials.
+Together, this approach opens new avenues for participatory and adaptable teaching methods.
 
 # Appendix
 
