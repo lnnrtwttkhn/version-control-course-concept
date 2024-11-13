@@ -9,11 +9,13 @@ engine: knitr
 
 ### Content
 
-In this age of computational and data-driven science, it is essential for researchers to track the evolution of digital objects like code and data for reproducible research and effective collaboration.
-
-crucially addressing the reproducibility crisis prevalent in many research fields, especially in Psychology [@obels2020; @hardwicke2021; @crüwell2023].
-Still, chaotic workflows are pervasive in science, reflecting a lack of training in tools and practices from software engineering and scientific computing that provide established solutions for collaborative digital workflows [@koroshetz2020].
-Addressing these challenges, we introduced the full-semester seminar "{{< var project.title >}}", in the Psychology M.Sc. program at University of Hamburg.
+In today's digital age, the majority of scientific insights in quantitative research are gained from the analysis of data using programming code.
+Although data and code are integral elements of their work, scientists often handle digital objects on their computers in a chaotic and unreliable manner.
+It is not uncommon to hear researchers wondering, "Which version of my data and code did I use to get this result?" or "I found a bug in my code. Since when was it there?" and "This code used to work! What did I change?".
+This not only affects the reproducibility and trustworthiness of science but also frequently leads to frustration, a waste of time, and, at worst, the loss of painstakingly accumulated work.
+The good news is that scientists can learn about practices and tools from other disciplines, particularly software engineering, that have significantly professionalized collaborative work on digital objects like programming code.
+At the core of this toolkit is the free and open-source software [Git]({{< links.git >}}), a so-called version control system that allows tracking and organizing the evolution of digital objects on computers and sharing them via platforms like [GitHub]({{< links.github >}}) or [GitLab]({{< links.gitlab >}}) .
+In this hands-on seminar with practical exercises, course participants learn how to track, organize and share their work using Git. 
 
 ### Structure
 
@@ -68,6 +70,14 @@ Fully open-source
 Modularity 
 
 Website Analytics
+
+
+In this age of computational and data-driven science, it is essential for researchers to track the evolution of digital objects like code and data for reproducible research and effective collaboration.
+crucially addressing the reproducibility crisis prevalent in many research fields, especially in Psychology [@obels2020; @hardwicke2021; @crüwell2023].
+Still, chaotic workflows are pervasive in science, reflecting a lack of training in tools and practices from software engineering and scientific computing that provide established solutions for collaborative digital workflows [@koroshetz2020].
+Addressing these challenges, we introduced the full-semester seminar "{{< var project.title >}}", in the Psychology M.Sc. program at University of Hamburg.
+
+
 
 # Appendix
 
