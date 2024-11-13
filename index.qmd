@@ -11,66 +11,65 @@ engine: knitr
 
 In today's digital age, the majority of scientific insights in quantitative research are gained from the analysis of data using programming code.
 Although data and code are integral elements of their work, scientists often handle digital objects on their computers in a chaotic and unreliable manner.
-It is not uncommon to hear researchers wondering, "Which version of my data and code did I use to get this result?" or "I found a bug in my code. Since when was it there?" and "This code used to work! What did I change?".
+It is not uncommon to hear researchers wondering, "Which version of my data and code did I use to get this result?" or "This code used to work! What happened?".
 This not only affects the reproducibility and trustworthiness of science but also frequently leads to frustration, a waste of time, and, at worst, the loss of painstakingly accumulated work.
 The good news is that scientists can learn about practices and tools from other disciplines, particularly software engineering, that have significantly professionalized collaborative work on digital objects like programming code.
-At the core of this toolkit is the free and open-source software [Git]({{< links.git >}}), a so-called version control system that allows tracking and organizing the evolution of digital objects on computers and sharing them via platforms like [GitHub]({{< links.github >}}) or [GitLab]({{< links.gitlab >}}) .
+At the core of this toolkit is the free and open-source software [Git]({{< links.git >}}), a so-called version control system that allows tracking and organizing the evolution of digital objects on computers and sharing them via platforms like [GitHub]({{< links.github >}}) or [GitLab]({{< links.gitlab >}}).
 In this hands-on seminar with practical exercises, course participants learn how to track, organize and share their work using Git. 
 
 ### Structure and didactic methods
 
 The seminar consists of up to 14 sessions, each lasting 90 minutes.
-Each seminar has a dedicated **Course Website** (see websites for [WS 23/24](https://lennartwittkuhn.com/version-control-course-uhh-ws23/schedule.html), [SS 24](https://lennartwittkuhn.com/version-control-course-uhh-ss24/schedule.html), [WS 24/25](https://lennartwittkuhn.com/version-control-course-uhh-eur-ws24/schedule.html)) that centralizes all relevant course information, a schedule, information about team members and course mechanics as well as code of conduct.
-There is a page for each session that transparently lists the session's procedure, learning objectives, exercises including example solutions and slides.
+Each course has its own dedicated course website ([WS 23](https://lennartwittkuhn.com/version-control-course-uhh-ws23/schedule.html), [SS 24](https://lennartwittkuhn.com/version-control-course-uhh-ss24/schedule.html), [WS 24](https://lennartwittkuhn.com/version-control-course-uhh-eur-ws24/schedule.html)), which transparently centralizes all course details, including the schedule, team information, course mechanics, and code of conduct.
+Each session page outlines the procedure, learning objectives, exercises with example solutions, and slides.
+Sessions follow a structured format as outlined below:
 
-Each session follows a roughly structured format as outlined below:
+In the *Reading* phase (up to 30 mins), participants study specific chapters in the ["Version Control Book"]({{< var links.version-control-book >}}).
+This free, open-source online textbook was developed specifically for the course, covering over 200 pages of course content.
+It also serves as a standalone open educational resource.
+Additionally, we provide links to other resources, allowing students to choose those that best support their learning.
 
-First, in the *Reading Phase* (up to 30 mins), course participants study specific chapters in the ["Version Control Book"]({{< var links.version-control-book >}}).
-The Version Control Book is a free, open-source online textbook that was specially developed for the course.
-It distills all course content in an accessible resource of more than 200 pages and also serves as a standalone open educational resource, accessible for free.
-In addition, we provide references to multiple other learning resources, allowing students to pick from those learning resources that they feel supports their learning process best.
+Each session focuses on *Exercises* (up to 60 mins) that emphasize hands-on implementation.
+Participants work on exercises and assignments inspired by ["pair programming"]({{< links.pair-programming >}}) [@williams2001].
+We encourage or require participants to work in pairs or small groups, promoting peer exchange and mutual support.
+Throughout the course, participants work on a project to build a version-controlled online cookbook.
+While this might sound a bit trivial or unscientific, it teaches essential steps in file management and the development of computational notebooks in a fun and engaging way - skills that can readily be applied to academic work, such as thesis projects.
 
-The main focus of each session are concrete *exercises* (up to 60 mins) that focus on hands-on implementation of the learn.
-Course participants actively work on hands-on exercises and assignments.
-The course assignments are inspired by the concept of ["pair programming"]({{< links.pair-programming >}}) [@williams2001].
-For the hands-on exercises, we actively encourage or even require course participants to work in pairs or small groups.
-This fosters exchange and mututal support among peers.
+Additionally, *Quizzes* (up to 15 mins) are offered roughly every two weeks to help students assess their progress toward the learning objectives.
+A [pre-course survey]({{< links.pre-course-survey >}}) gathers information on prior experience with relevant tools [LINK TO FIGURE], as well as students' expectations, concerns, and motivations .
+All questionnaires are created using the open-source survey framework [formr]({{< links.formr >}}) [@arslan2019; @arslan2024], a free alternative to proprietary software like [Qualtrics]({{< links.uhh-qualtrics >}}).
+Survey data is anonymized and analyzed to identify common errors or misunderstandings, which can be addressed in future sessions and guide the development of course materials.
 
-Project ähmlich wie reproduzierbares paper
-
-Finally, bi-weekly *quizzes* (up to 15 mins) are offered that address the course contents and allow the students to independently assess whether they've achieved the learning objectives.
-A [pre-course survey]({{< links.pre-course-survey >}}) assesses previous experience with relevant technical tools and asks participants about their expectations, hopes, worries and motivation for the course [LINK TO FIGURE].
-All online questionnaires are developed using the survey framework [formr]({{< links.formr >}}) [@arslan2019; @arslan2024], a free and open-source alternative to proprietary software like [Qualtrics]({{< links.uhh-qualtrics >}}).
-Data from all surveys are recorded anonymously and analyzed to identify any common errors or misunderstandings, which can be directly addressed in subsequent sessions and inform the further development of the teaching materials.
-
-Beyond these core structural and didactic elements, several additional components are part of our course design.
-Each session has clearly defined [learning objectives]({{< links.learning-objectives >}}).
-Exercises are clearly divided into mandatory and optional tasks.
-Next to the exercises, we provide example solutions and access to a clean project folder (details [here]({{< links.exercises >}}))
-Our [cheatsheets]({{< links.cheatsheets >}}) serve as a convenient look-up and reminder about all relevant commands learned in each session. 
-In addition, we collect web analytics data from all course-related websites using the open-source and GDPR-compliant tool [Plausible]({{< links.plausible >}})).
-This allows us not only to monitor the global use of our open educational resources but also to analyze online interactions with the websites and learning contents.
-A course [mailing list]({{< links.mailing-list >}}) is used to send announcements but also allows students to exchange via email outside of class time.
+In addition to core structural and didactice elements, several technical components are part of our course design.
+Each session has clear [learning objectives]({{< links.learning-objectives >}}).
+Exercises are split into mandatory and optional tasks, with example solutions and a clean project folder provided for download ([details here]({{< links.exercises >}})).
+Our [cheatsheets]({{< links.cheatsheets >}}) offer a quick reference for relevant commands learned in each session.
+In addition, we use the open-source, GDPR-compliant tool [Plausible]({{< links.plausible >}}) to collect web analytics, enabling us to monitor the use of resources and analyze online interactions.
+A [mailing list]({{< links.mailing-list >}}) is used for announcements and student communication outside class.
 
 ## Reference to teaching award criteria
 
-**Student centering.**
+### Student centering
+
 As the majority of class time is dedicated to hands-on exercises, active participation and engagement is the essential component of the course.
 Since all materials (course website, online textbook) are openly available, asynchronous self-study is enabled, allowing students to review course content, complete assignments, and take quizzes at their own level and pace, even outside scheduled class times.
 Even during class, students can engage with the study materials and exercises in their preferred learning style.
 
-**Connection of scientific and practical relevance.**
+### Connection of scientific and practical relevance
+
 The seminar connects theoretical knowledge and practical skills by providing hands-on training in version control with Git, a tool that is becoming increasingly important in academic research.
 In addition, students are introduced to theoretical concepts related to reproducibility, good scientific practices, and best practices for handling programming code and research data.
 These skills are not only gaining importance in psychological research but are also highly relevant in a variety of other potential career fields, where data-driven decision-making is crucial.
 
-**Topicality and degree of innovation.**
+### Topicality and degree of innovation
+
 Against the backdrop of the reproducibility crisis, particularly in psychological research [e.g., @obels2020; @hardwicke2021; @crüwell2023], the seminar is highly topical as it introduces students to transparent and reproducible workflows, one cornerstone of open science.
 The innovative nature of the seminar is reflected not only in its subject matter but also in its execution.
 All teaching materials are open-source educational resources, developed using cutting-edge tools and the same principles that are taught in the seminar.
 The seminar follows the "working in the open" approach, where the entire process - from the initial idea to the concrete implementation in programming code - is designed to be transparent and collaborative.
 
-**Promoting of research-based learning and critical thinking.**
+### Promoting of research-based learning and critical thinking
+
 The seminar concept is inspired by the approach of the Scholarship of Teaching, which designs and reflects on teaching practices from a reflective perspective.
 A comprehensive questionnaire at the start of the seminar systematically captures students' prior knowledge, motivation, concerns, and expectations.
 About every other session, students' understanding of key concepts is assessed.
@@ -78,19 +77,23 @@ The systematic versioning of all teaching and learning resources allows connecti
 Combined with the analysis of web analytics data, this enables data-driven improvements that inform the ongoing development of learning resources and teaching strategies.
 From the students' side, current scientific conduct - particularly with regard to transparency, effectiveness, and collaboration - are critically examined and questioned.
 
-**Feedback Culture.**
+### Feedback Culture
+
 Opportunities for contribution are provided on several levels: not only can students influence the seminar's progression through questions and feedback at any time, but the course also teaches the tools (primarily [Git]({{< links.git >}}), [GitHub]({{< links.github >}}), and [Quarto]({{< links.quarto >}})) used to create the course materials.
 Since all materials are open-source, students are motivated to contribute directly to the resources themselves.
 As two concrete examples, students [provided feedback via GitHub](https://github.com/lnnrtwttkhn/version-control-course-uhh-ss24/issues?q=label%3Afeedback) and one student directly [fixed a typo in the Version Control Book](https://github.com/lnnrtwttkhn/version-control-book/pull/200), demonstrating the principles conveyed in the course.
 
-**Promotion of equality**.
+### Promotion of equality
+
 Beyond technical elements, we focus on the social aspects of the learning experience, fostering a welcoming environment where participants must adhere to a [code of conduct]({{< links.code-of-conduct >}}).
 Collaborative learning is emphasized through exercises.
 Recognizing student's work load, course content is structured to be largely covered during class time
 All materials and tasks (including example solutions) are clearly described, making it easy to catch up.
 Additionally, Quarto's modern technical framework includes features that improve accessibility for individuals with visual or hearing impairments (for example, alternative text for images, hyperlegible font and auditory cues during slide progression).
+The tools taught in the course are available for all major operatinng systems, are free and open-source and therefore do not rely or promote the use of proprietary and costly software.
 
-**Internal Differentiation.**
+### Internal Differentiation
+
 Differentiation is achieved by allowing students to independently study the learning materials at their own pace.
 They can pair up with others who are at a similar learning stage, but also have the opportunity to collaborate with different peers during breaks, creating diverse learning interactions.
 Additionally, the concept of pair programming is implemented, where students support each other in completing tasks.
@@ -99,12 +102,14 @@ The tasks are consistently divided into mandatory and optional components.
 The mandatory tasks are designed to be achievable by all students, while the optional exercises provide opportunities for a deeper engagement with the content.
 The chapters of the Version Control Book are designed to be completed during class, with expandable sections and cross-references that provide additional background knowledge for further exploration.
 
-**Internationalization.**
+### Internationalization
+
 All course materials (website, book, slides) are available in English.
 With support from the University of Hamburg, the third version of the course is being held as an international teaching collaboration between the University of Hamburg and Erasmus University Rotterdam.
 The website usage data shows 100,000 users from over 30 countries (see image attached).
 
-**Media use.**
+### Media use
+
 While the course materials focus on *digital media* stellen sie eine breite auswahl an lernressourcen bereit.
 Von der Kurs-Website mit Slides über das umfangreiche Version Control Book, gibt es auch Quizzes.
 The course material are fully open-source and rely on open-source tools, providng high potential for Interoperabilkity and Reusabikut, central elements of the FAIR principles.
@@ -118,7 +123,18 @@ Together, this approach opens new avenues for participatory and adaptable teachi
 
 ## Teaching Award Criteria
 
-Student centering (e.g. promote active participation and engagement, encourage self-study, motivate, enable participation), teaching skills (e.g. understandable communication, commitment, professional competence), connection of scientific and practical relevance, topicality and degree of innovation, research-based learning, stimulate critical thinking, feedback culture, promotion of equality, internal differentiation, interdisciplinarity, internationalization, media use, evaluation results.
+- Student centering (e.g. promote active participation and engagement, encourage self-study, motivate, enable participation)
+- teaching skills (e.g. understandable communication, commitment, professional competence)
+- connection of scientific and practical relevance
+- topicality and degree of innovation
+- research-based learning, stimulate critical thinking
+- feedback culture
+- promotion of equality
+- internal differentiation
+- interdisciplinarity
+- internationalization
+- media use
+- evaluation results
 
 [Source]({{< links.award-criteria >}})
 
