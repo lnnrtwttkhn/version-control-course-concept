@@ -17,71 +17,114 @@ The good news is that scientists can learn about practices and tools from other 
 At the core of this toolkit is the free and open-source software [Git]({{< links.git >}}), a so-called version control system that allows tracking and organizing the evolution of digital objects on computers and sharing them via platforms like [GitHub]({{< links.github >}}) or [GitLab]({{< links.gitlab >}}) .
 In this hands-on seminar with practical exercises, course participants learn how to track, organize and share their work using Git. 
 
-### Structure
+### Structure and didactic methods
 
-### Didactic methods
+The seminar consists of up to 14 sessions, each lasting 90 minutes.
+Each seminar has a dedicated **Course Website** (see websites for [WS 23/24](https://lennartwittkuhn.com/version-control-course-uhh-ws23/schedule.html), [SS 24](https://lennartwittkuhn.com/version-control-course-uhh-ss24/schedule.html), [WS 24/25](https://lennartwittkuhn.com/version-control-course-uhh-eur-ws24/schedule.html)) that centralizes all relevant course information, a schedule, information about team members and course mechanics as well as code of conduct.
+There is a page for each session that transparently lists the session's procedure, learning objectives, exercises including example solutions and slides.
 
-At the heart of the course is the "Version Control Book", a dynamic online learning resource that covers essential concepts of version control in scientific settings.
-Complementing this resource, we created quizzes and exercises, and shared all materials on GitHub as extendable, open educational resources.
+Each session follows a roughly structured format as outlined below:
+
+First, in the *Reading Phase* (up to 30 mins), course participants study specific chapters in the ["Version Control Book"]({{< var links.version-control-book >}}).
+The Version Control Book is a free, open-source online textbook that was specially developed for the course.
+It distills all course content in an accessible resource of more than 200 pages and also serves as a standalone open educational resource, accessible for free.
+In addition, we provide references to multiple other learning resources, allowing students to pick from those learning resources that they feel supports their learning process best.
+
+The main focus of each session are concrete *exercises* (up to 60 mins) that focus on hands-on implementation of the learn.
+Course participants actively work on hands-on exercises and assignments.
+The course assignments are inspired by the concept of ["pair programming"]({{< links.pair-programming >}}) [@williams2001].
+For the hands-on exercises, we actively encourage or even require course participants to work in pairs or small groups.
+This fosters exchange and mututal support among peers.
+
+Project ähmlich wie reproduzierbares paper
+
+Finally, bi-weekly *quizzes* (up to 15 mins) are offered that address the course contents and allow the students to independently assess whether they've achieved the learning objectives.
+A [pre-course survey]({{< links.pre-course-survey >}}) assesses previous experience with relevant technical tools and asks participants about their expectations, hopes, worries and motivation for the course [LINK TO FIGURE].
+All online questionnaires are developed using the survey framework [formr]({{< links.formr >}}) [@arslan2019; @arslan2024], a free and open-source alternative to proprietary software like [Qualtrics]({{< links.uhh-qualtrics >}}).
+Data from all surveys are recorded anonymously and analyzed to identify any common errors or misunderstandings, which can be directly addressed in subsequent sessions and inform the further development of the teaching materials.
+
+Beyond these core structural and didactic elements, several additional components are part of our course design.
+Each session has clearly defined [learning objectives]({{< links.learning-objectives >}}).
+Exercises are clearly divided into mandatory and optional tasks.
+Next to the exercises, we provide example solutions and access to a clean project folder (details [here]({{< links.exercises >}}))
+Our [cheatsheets]({{< links.cheatsheets >}}) serve as a convenient look-up and reminder about all relevant commands learned in each session. 
+In addition, we collect web analytics data from all course-related websites using the open-source and GDPR-compliant tool [Plausible]({{< links.plausible >}})).
+This allows us not only to monitor the global use of our open educational resources but also to analyze online interactions with the websites and learning contents.
+A course [mailing list]({{< links.mailing-list >}}) is used to send announcements but also allows students to exchange via email outside of class time.
+
+Beyond these more technical elements, we also pay attention to social aspects of the learning experience.
+We aim to foster a welcoming learning environment and participants have to abide to a [code of conduct](({{< links.code-of-conduct >}}).
+We emphasize collaborative learning through the exercises 
+Recognizing student's work load, course content is designed to be mostly covered during class time.
+It's easy to catch up, because all materials are available and tasks (including example solutions) clearly described.
+Quarto: accessibility
 
 ## Reference to teaching award criteria
 
-Studierendenzentrierung (z.B. aktive Beteiligung und Auseinandersetzung fördern, Selbststudium anregen, motivieren, Mitgestaltung ermöglichen), Lehrkompetenz (z.B. verständliches Vermitteln, Engagement, Fachkompetenz), Verbindung von Wissenschaftlichkeit und Praxisbezug, Aktualität und Innovationsgrad, forschendes Lernen, kritisches Denken anregen, Feedback-Kultur, Gleichstellungsförderung, Binnendifferenzierung, Interdisziplinarität,, Medieneinsatz, Evaluationsergebnisse.
+[teaching award criteria](#teaching-award-criteria)
 
-Studierendenzentrierung: Students can study the materials at their own pace. Learning can take place at any time point.
-Given that the technical tools used to develop the course materials (mainly Git and Quarto) are also taught in the course, students are enabled to directly contribute to the course materials.
-For example, students provide feedback by opening Issues in the course repo and one student even provided a fix for a typo that he discovered during the course using the principles conveyed in the course.
-Die Studierenden setzen sich aktiv mit den Lehrmaterialien auseinander, indem sie in jeder Sitzung konkrete Übungen umsetzen.
-Das Version CTRL Brooke ermöglicht Asynchrones und eigenständiges Selbststudium. Auch die Aufgaben und Quiz. Es können nach eigenem Lernstand im Tempo auch außerhalb Der Seminar Zeit bearbeitet werden.
-Mitgestaltung wird auf mehreren Ebenen ermöglicht: abgesehen davon, dass die Studierenden zu jederzeit die Möglichkeit haben, mit Fragen und Anmerkungen den weiteren Verlauf des Seminars anzupassen, werden in dem Kurs auch die Tools gelehrt (git und Quarto) mit denen auch die Lehrmaterialien erstellt werden. Da alle Materialien Open Source sind, werden die Studierenden befähigt, direkt die Lehrmaterialien zu verändern und zu erweitern.
+**Student centering.**
+As the majority of class time is dedicated to hands-on exercises, **active participation and engagement** is the essential component of the course.
+Since all materials (course website, online textbook) are openly available, asynchronous **self-study** is enabled, allowing students to review course content, complete assignments, and take quizzes at their own level and pace, even outside scheduled class times.
+Even during class, students can engage with the study materials and exercises in their preferred learning style.
+Opportunities for **contribution** are provided on several levels: not only can students influence the seminar's progression through questions and feedback at any time, but the course also teaches the tools (primarily [Git]({{< links.git >}}), [GitHub]({{< links.github >}}), and [Quarto]({{< links.quarto >}})) used to create the course materials.
+Since all materials are open-source, students are **motivated** to contribute directly to the resources themselves.
+As two concrete examples, students [provided feedback via GitHub](https://github.com/lnnrtwttkhn/version-control-course-uhh-ss24/issues?q=label%3Afeedback) and one student directly [fixed a typo in the Version Control Book](https://github.com/lnnrtwttkhn/version-control-book/pull/200).
 
-Lehrkompetenz.
 
-**Verbindung von Wissenschaftlichkeit und Praxisbezug.** Das Seminar vermittelt praktische Kenntnisse in Versionskontrolle mit Git, ein Tool, dass in der Wissenschaft immer größere Bedeutung gewinnt.
-Darüber hinaus werden den Studierenden theoretische Hintergründe zu Themen wie Reproduzierbarkeit, gutes wissenschaftliches Arbeiten und Best-Practices im Umgang mit Programmiercode und Forschungsdaten vermittelt.
-Diese Kenntnisse gewinnen nicht mehr in der psychologischen Forschung. Immer größere Relevanz, sondern sind auch im weiteren potentiellen Berufsfeldern, in denen dann getriebene Entscheidung getroffen werden von Relevanz.
+ **teaching skills** (e.g. understandable communication, commitment, professional competence)
 
-**Aktualität und Innovationsgrad**. Vor dem Hintergrund der Reproduzierbarkeitskrise, insbesondere in der psychologischen Forschung, hat das Seminar des Studierenden, ein transparenten und nachvollziehbaren Arbeitsweise näher bringt, dringliche Aktualität. Der Innovationsgrad spiegelt sich nicht nur in der Thematik, sondern auch in der Umsetzung des Seminars wieder.
-Alle Lehrmaterialien sind Open Source education resources, die mithilfe von cutting edge tools und den gleichen Prinzipien dem Seminar vermittelt, werden umgesetzt werden.
-Das Seminar verfolgt den Ansatz von Walking in die OP bei dem von der Initialen Idee zur konkreten Umsetzung im Programmiercode der gesamte Prozess, transparent und Kollaborativ gestaltet wird.
+**Connection of scientific and practical relevance.**
+The seminar connects theoretical knowledge and practical skills by providing hands-on training in version control with Git, a tool that is becoming increasingly important in academic research.
+In addition, students are introduced to theoretical concepts related to reproducibility, good scientific practices, and best practices for handling programming code and research data.
+These skills are not only gaining importance in psychological research but are also highly relevant in a variety of other potential career fields, where data-driven decision-making is crucial.
 
-**forschendes Lernen, kritisches Denken anregen** Das Seminarkonzept ist inspiriert durch den Ansatz des ScholarShip of teaching, Der die Lehre mit einem falschen Blick konzipiert und reflektiert. Ein umfangreicher Fragebogen zu Beginn des Seminars ermöglicht Vorkenntnisse, Motivation, Befürchtungen und Wünsche der Studierenden systematisch zu erfassen. In etwa jede zweite Sitzung wird der Kenntnisstand der Studierenden Zu wichtigen Konzepten des Seminars überprüft. Die systematische Versionierung alle Lehr und Lernressourcen,  ermöglicht es dann selbst im Nachhinein Zusammenhänge zwischen dem fachlichen Kenntnisstand der Studierenden und der Aufbereitung der Lehrmaterialien herzustellen. In Kombination mit der Analyse von Webanalyticsdaten, können so datengetriebene Verbesserungen abgeleitet werden, die die Weiterentwicklung der Lernressourcen und didaktischen Konzept informieren.
-Auf Seiten der Studierenden werden wissenschaftliche Arbeitsweisen, vor allem in Hinblick auf Transparenz, Effektivität und Kollaboration kritisch hinterfragt.
+**Topicality and degree of innovation.**
+Against the backdrop of the reproducibility crisis, particularly in psychological research [e.g., @obels2020; @hardwicke2021; @crüwell2023], the seminar is highly topical as it introduces students to transparent and reproducible workflows, one cornerstone of open science.
+The innovative nature of the seminar is reflected not only in its subject matter but also in its execution.
+All teaching materials are open-source educational resources, developed using cutting-edge tools and the same principles that are taught in the seminar.
+The seminar follows the "working in the open" approach, where the entire process - from the initial idea to the concrete implementation in programming code - is designed to be transparent and collaborative.
+
+**Promoting Research-Based Learning and Critical Thinking.**
+The seminar concept is inspired by the approach of the Scholarship of Teaching, which designs and reflects on teaching practices from a reflective perspective.
+A comprehensive questionnaire at the start of the seminar systematically captures students' prior knowledge, motivation, concerns, and expectations.
+About every other session, students' understanding of key concepts is assessed.
+The systematic versioning of all teaching and learning resources allows connections to be made between students' knowledge and the development of the teaching materials, even retrospectively.
+Combined with the analysis of web analytics data, this enables data-driven improvements that inform the ongoing development of learning resources and teaching strategies.
+From the students' side, current scientific conduct - particularly with regard to transparency, effectiveness, and collaboration - are critically examined and questioned.
+
 
 **Feedback-Kultur**
 
 
+**Internal Differentiation.**
+Differentiation is achieved by allowing students to independently study the learning materials at their own pace.
+They can pair up with others who are at a similar learning stage, but also have the opportunity to collaborate with different peers during breaks, creating diverse learning interactions.
+Additionally, the concept of pair programming is implemented, where students support each other in completing tasks.
+Advanced students have the chance to share their knowledge with others, reinforcing their own understanding while taking on the role of a teacher.
+The tasks are consistently divided into mandatory and optional components.
+The mandatory tasks are designed to be achievable by all students, while the optional exercises provide opportunities for a deeper engagement with the content.
 
-**Binnendifferenzierung**. Binnendifferenzierung Wie wird erreicht, in dem ständigen eigenständig noch einmal ihre Geschwindigkeit die Lernmaterialien studieren können? Sie können sich Partner suchen, mit einem ähnlichen Lernfortschritt, aber dann auch durch erneutes Zusammentreffen der Pause, immer wieder am Herford, sich mit anderen zusammen zu tun auch wenn wir nicht wünsche, eine Variante, das Pair programming bei dem studierende sich gegenseitig bei der Umsetzun der Aufgaben unterstützen. Fortgeschrittener Studierende können ihr Wissen mit anderen Studierenden teilen und festigen ihre Kenntnisse indem sie so auch als Lehrperson auftreten.
-Die Aufgaben sind stets in verpflichtende und optimale Aufgaben aufgeteilt. Die verpflichtenden Aufgaben haben einen Anforderungsgrad, der von allen Studierenden erreicht werden kann während optionale Übung eine vertiefte Beschäftigung mit dem Inhalt der möglicht.
+**Internationalization.**
+All course materials (website, book, slides) are available in English.
+With support from the University of Hamburg, the third version of the course is being held as an international teaching collaboration between the University of Hamburg and Erasmus University Rotterdam.
+The website usage data shows 100,000 users from over 30 countries (see image attached).
 
-
-
-**Internationalisierung**: Alle Kursmaterialien (Website, Book, Slides) sind auf English.
-Mit Förderung der Uni Hamburg findet die dritte Version des Kurses als eine internationale teaching collaboration between the university of Hamburg and Erasmus University Rotterdam statt.
-Die Website-Nutzung zeigt 100.000 Nutzende aus über 30 Ländern (Bild im Anhang).
 
 Project relies on open-source tools itself (mainly Git, Quarto and formR).
 Quarto as a modern framework also uses several features that improve accessibility of materials for people with visual or hearing impairments.
 
-
 Fully open-source
-
-Modularity 
-
-Website Analytics
-
-
-In this age of computational and data-driven science, it is essential for researchers to track the evolution of digital objects like code and data for reproducible research and effective collaboration.
-crucially addressing the reproducibility crisis prevalent in many research fields, especially in Psychology [@obels2020; @hardwicke2021; @crüwell2023].
-Still, chaotic workflows are pervasive in science, reflecting a lack of training in tools and practices from software engineering and scientific computing that provide established solutions for collaborative digital workflows [@koroshetz2020].
-Addressing these challenges, we introduced the full-semester seminar "{{< var project.title >}}", in the Psychology M.Sc. program at University of Hamburg.
-
-
 
 # Appendix
 
 ## Acknowledgements
+
+## Teaching Award Criteria
+
+Student centering (e.g. promote active participation and engagement, encourage self-study, motivate, enable participation), teaching skills (e.g. understandable communication, commitment, professional competence), connection of scientific and practical relevance, topicality and degree of innovation, research-based learning, stimulate critical thinking, feedback culture, promotion of equality, internal differentiation, interdisciplinarity, internationalization, media use, evaluation results.
+
+[Source]({{< links.award-criteria >}})
 
 ## References
 
