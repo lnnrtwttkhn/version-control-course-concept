@@ -5,6 +5,13 @@ date: 2024-11-15
 engine: knitr
 ---
 
+::: {.callout-note}
+This concept paper summarizes content, structure and didactic methods of the full-semester course "{{< var project.title >}}" by [{{< var project.author>}}]({{< var project.homepage >}}).
+It was prepared for the Teaching Award 2024 at the Institute of Psychology, University of Hamburg.
+More details about the course and teaching approach can be found in this [project description]({{< var links.ddlitlab-description >}}), this [project report]({{< var links.ddlitlab-report >}}) and a [20-minute video interview]({{< var links.video-interview >}}).
+Hyperlinks are highlighted in blue.
+:::
+
 ## Concept of the course
 
 ### Content
