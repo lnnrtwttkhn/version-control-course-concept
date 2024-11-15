@@ -1,6 +1,4 @@
 ---
-title: "{{< var project.title >}}"
-subtitle: "{{< var project.subtitle >}}"
 date: 2024-11-15
 engine: knitr
 ---
