@@ -16,43 +16,40 @@ Hyperlinks are highlighted in blue.
 
 ### Content
 
-In today's digital age, the majority of scientific insights in quantitative research are gained from the analysis of data using programming code.
-Although data and code are integral elements of their work, scientists often handle digital objects on their computers in a chaotic and unreliable manner.
-It is not uncommon to hear researchers wondering, "Which version of my data and code did I use to get this result?" or "This code used to work! What happened?".
-This not only affects the reproducibility and trustworthiness of science but also frequently leads to frustration, a waste of time, and, at worst, the loss of painstakingly accumulated work.
+In today's digital age, most scientific insights in quantitative research are gained from the analysis of data using programming code.
+Despite the importance of data and code, researchers often deal with digital objects on their computers in a chaotic manner.
+Questions such as "Which version did I use?" or "What did I change?" are common, compromising the reproducibility and trustworthiness of science and leading to frustration and loss of time.
 The good news is that scientists can learn about practices and tools from other disciplines, particularly software engineering, that have significantly professionalized collaborative work on digital objects like programming code.
-At the core of this toolkit is the free and open-source software [Git]({{< links.git >}}), a so-called version control system that allows tracking and organizing the evolution of digital objects on computers and sharing them via platforms like [GitHub]({{< links.github >}}) or [GitLab]({{< links.gitlab >}}).
-In this hands-on seminar with practical exercises, course participants learn how to track, organize and share their work using Git. 
+At the core of this toolkit is the free and open-source software [Git]({{< var links.git >}}), a so-called "version control system" that allows managing the evolution of digital objects on computers and sharing them via platforms like [GitHub]({{< var links.github >}}) or [GitLab]({{< var links.gitlab >}}).
+In this hands-on seminar with practical exercises, course participants learn how to track, organize and share their work using Git.
 
 ### Structure and didactic methods
 
-The seminar consists of up to 14 sessions, each lasting 90 minutes.
-Each course has its own dedicated course website ([WS 23](https://lennartwittkuhn.com/version-control-course-uhh-ws23/schedule.html), [SS 24](https://lennartwittkuhn.com/version-control-course-uhh-ss24/schedule.html), [WS 24](https://lennartwittkuhn.com/version-control-course-uhh-eur-ws24/schedule.html)), which transparently centralizes all course details, including the schedule, team information, course mechanics, and code of conduct.
-Each session page outlines the procedure, learning objectives, exercises with example solutions, and slides.
-Sessions follow a structured format as outlined below:
+The seminar consists of up to 14 sessions, with 90 minutes per session.
+Each course has its own dedicated course website ([WS 23]({{< var links.website-ws23 >}}), [SS 24]({{< var links.website-ws23 >}}), [WS 24]({{< var links.website-ws24 >}})), which transparently centralizes all course details, including the schedule, course information, course mechanics, and materials for each session.
+Each session page transparently outlines the procedure, clear learning objectives, exercises with example solutions, and slides.
+The sessions follow a structured format as outlined below:
 
 In the *Reading* phase (up to 30 mins), participants study specific chapters in the ["Version Control Book"]({{< var links.version-control-book >}}).
-This free, open-source online textbook was developed specifically for the course, covering over 200 pages of course content.
-It also serves as a standalone open educational resource.
-Additionally, we provide links to other resources, allowing students to choose those that best support their learning.
+This free, open-source online textbook was specially developed for the course, covering over 200 pages of detailed course content.
+It also works as a standalone open educational resource, allowing for self-paced learning outside of class time.
 
-Each session focuses on *Exercises* (up to 60 mins) that emphasize hands-on implementation.
-Participants work on exercises and assignments inspired by ["pair programming"]({{< links.pair-programming >}}) [@williams2001].
-We encourage or require participants to work in pairs or small groups, promoting peer exchange and mutual support.
-Throughout the course, participants work on a project to build a version-controlled online cookbook.
-While this might sound a bit trivial or unscientific, it teaches essential steps in file management and the development of computational notebooks in a fun and engaging way - skills that can readily be applied to academic work, such as thesis projects.
+During *Exercises* (up to 60 mins) the course focuses on hands-on implementation.
+Participants work on coding assignments inspired by ["pair programming"]({{< var links.pair-programming >}}) [@williams2001]:
+Participants work together in small groups, promoting peer exchange and mutual support.
+Throughout the course, participants work on a project to build a [version-controlled online cookbook]({{< var links.recipes >}}).
+While this might sound trivial or unscientific, it actually teaches essential steps in file management and the development of computational notebooks in a fun and engaging way - skills that can readily be applied to academic work, such as thesis projects.
 
-Additionally, *Quizzes* (up to 15 mins) are offered roughly every two weeks to help students assess their progress toward the learning objectives.
-A [pre-course survey]({{< links.pre-course-survey >}}) gathers information on prior experience with relevant tools [LINK TO FIGURE], as well as students' expectations, concerns, and motivations .
-All questionnaires are created using the open-source survey framework [formr]({{< links.formr >}}) [@arslan2019; @arslan2024], a free alternative to proprietary software like [Qualtrics]({{< links.uhh-qualtrics >}}).
-Survey data is anonymized and analyzed to identify common errors or misunderstandings, which can be addressed in future sessions and guide the development of course materials.
+In addition, *Quizzes* (up to 15 mins) are offered roughly every two weeks to help students assess their progress towards the learning objectives.
+A [pre-course survey]({{< var links.pre-course-survey >}}) gathers information on prior experience with relevant tools [LINK TO FIGURE], as well as students' expectations, concerns, and motivations which are addressed in the course.
+All questionnaires are created using the open-source survey framework [formr]({{< var links.formr >}}) [@arslan2019; @arslan2024], a free alternative to proprietary tools like [Qualtrics]({{< var links.uhh-qualtrics >}}) and all [survey code]({{< var links.version-control-survey >}}) is shared.
+Survey data is anonymized and analyzed to identify common errors or misunderstandings, which can be addressed in subsequent sessions and guide the development of course materials.
 
-In addition to core structural and didactice elements, several technical components are part of our course design.
-Each session has clear [learning objectives]({{< links.learning-objectives >}}).
-Exercises are split into mandatory and optional tasks, with example solutions and a clean project folder provided for download ([details here]({{< links.exercises >}})).
-Our [cheatsheets]({{< links.cheatsheets >}}) offer a quick reference for relevant commands learned in each session.
-In addition, we use the open-source, GDPR-compliant tool [Plausible]({{< links.plausible >}}) to collect web analytics, enabling us to monitor the use of resources and analyze online interactions.
-A [mailing list]({{< links.mailing-list >}}) is used for announcements and student communication outside class.
+In addition to these core structural and didactic elements, several technical components are part of our course design.
+Each session has clear [learning objectives]({{< var links.learning-objectives >}}).
+[Exercises]({{< var links.exercises >}}) are split into mandatory and optional tasks, with example solutions and a clean project folder provided for download.
+Our [cheatsheets]({{< var links.cheatsheets >}}) offer a quick reference for relevant commands learned in each session.
+In addition, we use the open-source, GDPR-compliant tool [Plausible]({{< var links.plausible >}}) to collect web analytics, enabling us to monitor the use of resources and analyze online interactions.
 
 ## Reference to teaching award criteria
 
@@ -86,13 +83,13 @@ From the students' side, current scientific conduct - particularly with regard t
 
 ### Feedback Culture
 
-Opportunities for contribution are provided on several levels: not only can students influence the seminar's progression through questions and feedback at any time, but the course also teaches the tools (primarily [Git]({{< links.git >}}), [GitHub]({{< links.github >}}), and [Quarto]({{< links.quarto >}})) used to create the course materials.
+Opportunities for contribution are provided on several levels: not only can students influence the seminar's progression through questions and feedback at any time, but the course also teaches the tools (primarily [Git]({{< var links.git >}}), [GitHub]({{< var links.github >}}), and [Quarto]({{< var links.quarto >}})) used to create the course materials.
 Since all materials are open-source, students are motivated to contribute directly to the resources themselves.
 As two concrete examples, students [provided feedback via GitHub](https://github.com/lnnrtwttkhn/version-control-course-uhh-ss24/issues?q=label%3Afeedback) and one student directly [fixed a typo in the Version Control Book](https://github.com/lnnrtwttkhn/version-control-book/pull/200), demonstrating the principles conveyed in the course.
 
 ### Promotion of equality
 
-Beyond technical elements, we focus on the social aspects of the learning experience, fostering a welcoming environment where participants must adhere to a [code of conduct]({{< links.code-of-conduct >}}).
+Beyond technical elements, we focus on the social aspects of the learning experience, fostering a welcoming environment where participants must adhere to a [code of conduct]({{< var links.code-of-conduct >}}).
 Collaborative learning is emphasized through exercises.
 Recognizing student's work load, course content is structured to be largely covered during class time
 All materials and tasks (including example solutions) are clearly described, making it easy to catch up.
@@ -143,7 +140,7 @@ Together, this approach opens new avenues for participatory and adaptable teachi
 - media use
 - evaluation results
 
-[Source]({{< links.award-criteria >}})
+[Source]({{< var links.award-criteria >}})
 
 ## References
 
