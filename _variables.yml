@@ -2,6 +2,7 @@ project:
   name: "version-control-course-concept"
   title: "Track, organize and share your work: An introduction to Git for research"
   subtitle: "Concept paper for the full-semester course on version control with Git, prepared for the teaching award nomination at the Institute of Psychology, University of Hamburg"
+  author: "Dr. Lennart Wittkuhn"
   source: "https://github.com/lnnrtwttkhn/{{< var project.name >}}"
   website: "https://lennartwittkuhn.com/{{< var project.name >}}"
   issues: "https://github.com/lnnrtwttkhn/{{< var project.name >}}/issues"
