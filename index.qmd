@@ -26,19 +26,20 @@ In this hands-on seminar with practical exercises, course participants learn how
 ### Structure and didactic methods
 
 The seminar consists of up to 14 sessions, with 90 minutes per session.
-Each course has its own dedicated course website ([WS 23]({{< var links.website-ws23 >}}), [SS 24]({{< var links.website-ws23 >}}), [WS 24]({{< var links.website-ws24 >}})), which transparently centralizes all course details, including the schedule, course information, course mechanics, and materials for each session.
-Each session page transparently outlines the procedure, clear learning objectives, exercises with example solutions, and slides.
-The sessions follow a structured format as outlined below:
+Every course features a dedicated course website ([WS 23]({{< var links.website-ws23 >}}), [SS 24]({{< var links.website-ss24 >}}), [WS 24]({{< var links.website-ws24 >}})), serving as a centralized platform for all course-related details.
+This includes the course schedule, course information, course mechanics, and session-specific materials.
+Each session page provides a transparent overview of the procedure, clearly defined learning objectives, exercises with example solutions, and accompanying slides.
+The sessions follow a consistent and structured format as outlined below:
 
-In the *Reading* phase (up to 30 mins), participants study specific chapters in the ["Version Control Book"]({{< var links.version-control-book >}}).
-This free, open-source online textbook was specially developed for the course, covering over 200 pages of detailed course content.
-It also works as a standalone open educational resource, allowing for self-paced learning outside of class time.
+During the *Reading* phase (up to 30 minutes), participants explore specific chapters from the ["Version Control Book"]({{< var links.version-control-book >}}). 
+This free, open-source online textbook, specially created for the course, encompasses over 200 pages of in-depth course content.
+It also serves as a standalone open educational resource, supporting self-paced learning beyond the classroom.
 
-During *Exercises* (up to 60 mins) the course focuses on hands-on implementation.
-Participants work on coding assignments inspired by ["pair programming"]({{< var links.pair-programming >}}) [@williams2001]:
-Participants work together in small groups, promoting peer exchange and mutual support.
-Throughout the course, participants work on a project to build a [version-controlled online cookbook]({{< var links.recipes >}}).
-While this might sound trivial or unscientific, it actually teaches essential steps in file management and the development of computational notebooks in a fun and engaging way - skills that can readily be applied to academic work, such as thesis projects.
+During the *Exercises* phase (up to 60 minutes), the course emphasizes hands-on implementation.
+Participants collaborate on coding assignments inspired by ["pair programming"]({{< var links.pair-programming >}}) [@williams2001], working in small groups to encourage peer exchange and mutual support. 
+Over the course duration, participants develop a [version-controlled online cookbook]({{< var links.recipes >}}).
+While this project may appear simple or non-academic, it effectively teaches critical skills in file management and the creation of computational notebooks in a fun and engaging way.
+These skills are directly transferable to academic tasks, such as thesis projects.
 
 In addition, *Quizzes* (up to 15 mins) are offered roughly every two weeks to help students assess their progress towards the learning objectives.
 A [pre-course survey]({{< var links.pre-course-survey >}}) gathers information on prior experience with relevant tools [LINK TO FIGURE], as well as students' expectations, concerns, and motivations which are addressed in the course.
