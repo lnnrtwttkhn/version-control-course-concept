@@ -29,6 +29,8 @@ links:
   gitlab: "https://about.gitlab.com/"
   quarto: "https://quarto.org/"
   formr: "https://formr.org/"
+  plausible: "https://plausible.io/"
+  zenodo: "https://zenodo.org/"
   uhh-qualtrics: "https://psyunihamburg.eu.qualtrics.com/login"
   pair-programming: "https://en.wikipedia.org/wiki/Pair_programming"
   version-control-book: "https://lennartwittkuhn.com/version-control-book/"
@@ -45,6 +47,7 @@ links:
   mailing-list: "https://lists.uni-hamburg.de/mailman/listinfo/version-control-course-ss24.psych"
   code-of-conduct: "https://lennartwittkuhn.com/version-control-course-uhh-ws23/code-of-conduct.html"
   recipes: "https://lennartwittkuhn.com/recipes/"
-  plausible: "https://plausible.io/"
+
   pre-course-survey: "https://version-control-intro.formr.org/"
+  fair-teaching-proposal: "https://lennartwittkuhn.com/fair-teaching-proposal/"
   award-criteria: "https://www.psy.uni-hamburg.de/en/ueber-das-institut/lehrpreis-psychologie.html"
