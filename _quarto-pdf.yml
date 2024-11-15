@@ -6,6 +6,10 @@ format:
       {{< var project.author >}}, 2024-11-15
     # table of contents:
     toc: false
+    # references:
+    link-citations: true
+    link-bibliography: true
+    # includes
     include-in-header:
       - text: |
           \usepackage{style}
