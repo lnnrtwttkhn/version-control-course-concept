@@ -14,14 +14,14 @@
 % Reduce line spacing throughout the document
 \renewcommand{\baselinestretch}{1.0}  % Adjust line spacing to 1.0 (default 1.5)
 
-% Customize section headings to reduce space
+% Customize section headings to make them larger
 \usepackage{titlesec}
 \titleformat{\section}[runin]  % Section titles run into the text
-  {\normalfont\bfseries}{\thesection}{1em}{}
+  {\normalfont\bfseries\LARGE}{\thesection}{1em}{}
 \titlespacing*{\section}{0pt}{0.5ex plus .1ex minus .1ex}{0.5em}
 
 \titleformat{\subsection}[runin]  % Subsection titles run into the text
-  {\normalfont\bfseries}{\thesubsection}{1em}{}
+  {\normalfont\bfseries\large}{\thesubsection}{1em}{}
 \titlespacing*{\subsection}{0pt}{0.5ex plus .1ex minus .1ex}{0.5em}
 
 % Reduce space after the title and section headings
@@ -52,10 +52,10 @@
 % Set smaller footnotes and make them more compact
 \renewcommand{\footnotesize}{\scriptsize}
 
-% Make title smaller (without requiring external packages)
+% Make title smaller (without requiring external packages) and remove author/date
 \renewcommand{\maketitle}{%
   \begin{center}%
-    \normalfont\LARGE \textbf{\@title} % Use \@title to directly insert the title
+    \normalfont\large \textbf{\@title} % Smaller title size (\large)
   \end{center}%
   \vskip -1.5em  % Reduces space before and after the title
 }
@@ -64,7 +64,7 @@
 \makeatletter
 \def\@maketitle{%
   \begin{center}%
-    \normalfont\LARGE \textbf{\@title} \par
+    \normalfont\large \textbf{\@title} \par  % Smaller title size (\large)
   \end{center}%
   \vskip -1.5em  % Adjust vertical space before and after the title
 }
