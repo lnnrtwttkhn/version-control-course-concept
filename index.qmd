@@ -1,14 +1,16 @@
 ---
 date: 2024-11-15
+doi: 10.25592/uhhfdm.16245
 engine: knitr
 ---
 
 ::: {.callout-note appearance="simple"}
 This concept paper summarizes content, structure, and didactic methods of the full-semester course "{{< var project.title >}}" by [{{< var project.author>}}]({{< var project.homepage >}}).
 An online version is available at [{{< var project.website >}}]({{< var project.website >}}).
+A PDF version is archived at [doi: {{< var project.doi >}}]({{< var project.doi-link >}}).
 It was prepared for the Teaching Award 2024 at the Institute of Psychology, University of Hamburg.
 More details about the course can also be found in this [project description]({{< var links.ddlitlab-description >}}), this [project report]({{< var links.ddlitlab-report >}}), and a [20-minute video interview]({{< var links.video-interview >}}).
-Links to external resources are highlighted in blue font.
+Links to external resources are highlighted in blue.
 :::
 
 ## Concept of the course
