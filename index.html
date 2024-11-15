@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.55">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Dr.&nbsp;Lennart Wittkuhn">
+<meta name="dcterms.date" content="2024-11-15">
+
+<title>Track, organize and share your work: An introduction to Git for research</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+
+
+</head>
+
+<body>
+
+<div id="quarto-search-results"></div>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="99">
+    <h2 id="toc-title">Contents</h2>
+   
+  <ul>
+  <li><a href="#concept-of-the-course" id="toc-concept-of-the-course" class="nav-link active" data-scroll-target="#concept-of-the-course">Concept of the course</a>
+  <ul class="collapse">
+  <li><a href="#content" id="toc-content" class="nav-link" data-scroll-target="#content">Content</a></li>
+  <li><a href="#structure-and-didactic-methods" id="toc-structure-and-didactic-methods" class="nav-link" data-scroll-target="#structure-and-didactic-methods">Structure and didactic methods</a></li>
+  </ul></li>
+  <li><a href="#reference-to-teaching-award-criteria" id="toc-reference-to-teaching-award-criteria" class="nav-link" data-scroll-target="#reference-to-teaching-award-criteria">Reference to teaching award criteria</a>
+  <ul class="collapse">
+  <li><a href="#student-centering" id="toc-student-centering" class="nav-link" data-scroll-target="#student-centering">Student centering</a></li>
+  <li><a href="#connection-of-scientific-and-practical-relevance" id="toc-connection-of-scientific-and-practical-relevance" class="nav-link" data-scroll-target="#connection-of-scientific-and-practical-relevance">Connection of scientific and practical relevance</a></li>
+  <li><a href="#topicality-and-degree-of-innovation" id="toc-topicality-and-degree-of-innovation" class="nav-link" data-scroll-target="#topicality-and-degree-of-innovation">Topicality and degree of innovation</a></li>
+  <li><a href="#promoting-research-based-learning-and-critical-thinking" id="toc-promoting-research-based-learning-and-critical-thinking" class="nav-link" data-scroll-target="#promoting-research-based-learning-and-critical-thinking">Promoting research-based learning and critical thinking</a></li>
+  <li><a href="#feedback-culture" id="toc-feedback-culture" class="nav-link" data-scroll-target="#feedback-culture">Feedback Culture</a></li>
+  <li><a href="#promotion-of-equality" id="toc-promotion-of-equality" class="nav-link" data-scroll-target="#promotion-of-equality">Promotion of equality</a></li>
+  <li><a href="#internal-differentiation" id="toc-internal-differentiation" class="nav-link" data-scroll-target="#internal-differentiation">Internal Differentiation</a></li>
+  <li><a href="#interdisciplinarity" id="toc-interdisciplinarity" class="nav-link" data-scroll-target="#interdisciplinarity">Interdisciplinarity</a></li>
+  <li><a href="#internationalization" id="toc-internationalization" class="nav-link" data-scroll-target="#internationalization">Internationalization</a></li>
+  <li><a href="#media-use" id="toc-media-use" class="nav-link" data-scroll-target="#media-use">Media use</a></li>
+  <li><a href="#evaluation-results" id="toc-evaluation-results" class="nav-link" data-scroll-target="#evaluation-results">Evaluation results</a></li>
+  </ul></li>
+  <li><a href="#appendix" id="toc-appendix" class="nav-link" data-scroll-target="#appendix">Appendix</a>
+  <ul class="collapse">
+  <li><a href="#acknowledgements" id="toc-acknowledgements" class="nav-link" data-scroll-target="#acknowledgements">Acknowledgements</a></li>
+  <li><a href="#teaching-award-criteria" id="toc-teaching-award-criteria" class="nav-link" data-scroll-target="#teaching-award-criteria">Teaching Award Criteria</a></li>
+  </ul></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<div class="quarto-title-block"><div><h1 class="title">Track, organize and share your work: An introduction to Git for research</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source" data-quarto-source-url="https://github.com/lnnrtwttkhn/version-control-course-concept"><i class="bi"></i> Code</button></div></div>
+<p class="subtitle lead">Concept paper for the full-semester course on version control with Git, prepared for the Teaching Award 2024 at the Institute of Psychology, University of Hamburg</p>
+</div>
+
+
+<div class="quarto-title-meta-author">
+  <div class="quarto-title-meta-heading">Author</div>
+  <div class="quarto-title-meta-heading">Affiliations</div>
+  
+    <div class="quarto-title-meta-contents">
+    <p class="author"><a href="https://lennartwittkuhn.com/">Dr.&nbsp;Lennart Wittkuhn</a> <a href="mailto:lennart.wittkuhn@uni-hamburg.de" class="quarto-title-author-email"><i class="bi bi-envelope"></i></a> <a href="https://orcid.org/0000-0003-2966-6888" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a></p>
+  </div>
+  <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            <a href="https://www.psy.uni-hamburg.de/en.html">
+            Institute of Psychology, University of Hamburg, Germany
+            </a>
+          </p>
+      </div>
+  </div>
+
+<div class="quarto-title-meta">
+
+      
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">November 15, 2024</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>This concept paper summarizes content, structure, and didactic methods of the full-semester course “Track, organize and share your work: An introduction to Git for research” by <a href="https://lennartwittkuhn.com/">Dr.&nbsp;Lennart Wittkuhn</a>. An online version is available at <a href="https://lennartwittkuhn.com/version-control-course-concept">https://lennartwittkuhn.com/version-control-course-concept</a>. It was prepared for the Teaching Award 2024 at the Institute of Psychology, University of Hamburg. More details about the course can also be found in this <a href="https://www.isa.uni-hamburg.de/en/ddlitlab/data-literacy-lehrlabor/zweite-foerderrunde/06-git.html">project description</a>, this <a href="https://lennartwittkuhn.com/ddlitlab-report/">project report</a>, and a <a href="https://lecture2go.uni-hamburg.de/l2go/-/get/v/70364">20-minute video interview</a>. Links to external resources are highlighted in blue.</p>
+</div>
+</div>
+</div>
+<section id="concept-of-the-course" class="level2">
+<h2 class="anchored" data-anchor-id="concept-of-the-course">Concept of the course</h2>
+<section id="content" class="level3">
+<h3 class="anchored" data-anchor-id="content">Content</h3>
+<p>In today’s digital age, most scientific insights in quantitative research are gained from the analysis of data using programming code. Despite the importance of data and code, researchers often deal with digital objects on their computers in a chaotic manner. Questions such as “Which version did I use?” or “What did I change?” are common, compromising the reproducibility and trustworthiness of science and leading to frustration and loss of time. The good news is that scientists can learn about practices and tools from other disciplines, particularly software engineering, that have professionalized collaborative work on digital objects like programming code. At the core of this toolkit is the free and open-source software <a href="https://git-scm.com/">Git</a>, a so-called “version control system” that allows managing the evolution of digital objects on computers and sharing them via platforms like <a href="https://github.com/">GitHub</a> or <a href="https://about.gitlab.com/">GitLab</a>. In this hands-on seminar with practical exercises, course participants learn how to track, organize and share their work using Git.</p>
+</section>
+<section id="structure-and-didactic-methods" class="level3">
+<h3 class="anchored" data-anchor-id="structure-and-didactic-methods">Structure and didactic methods</h3>
+<p>The full-semester seminar consists of up to 14 sessions, with 90 minutes per session. Every course features a dedicated course website (see <a href="https://lennartwittkuhn.com/version-control-course-uhh-ws23/">WS 23</a>, <a href="https://lennartwittkuhn.com/version-control-course-uhh-ss24/">SS 24</a>, <a href="https://lennartwittkuhn.com/version-control-course-uhh-eur-ws24/">WS 24</a>), serving as a centralized platform for all course-related details. This includes the course schedule, course information, course mechanics, and session-specific materials. Each session page provides a transparent overview of the procedure, clearly defined learning objectives, exercises with example solutions, and accompanying slides. The sessions follow a consistent and structured format as outlined in the following:</p>
+<p>During the <em>Reading</em> phase (ca. 30 minutes), participants explore chapters from the <a href="https://lennartwittkuhn.com/version-control-book/">“Version Control Book”</a>. This free, open-source online textbook, specially created for the course, encompasses over 200 pages of in-depth course content. It also serves as a standalone open educational resource, supporting self-paced learning beyond the classroom and making knowledge about version control accessible to anyone.</p>
+<p>During the <em>Exercises</em> phase (ca. 50 minutes), the course emphasizes hands-on implementation. Participants collaborate on coding assignments inspired by <a href="https://en.wikipedia.org/wiki/Pair_programming">“pair programming”</a> <span class="citation" data-cites="williams2001">(<a href="#ref-williams2001" role="doc-biblioref">Williams, 2001</a>)</span>, working in small groups to encourage peer exchange and mutual support. Over the course duration, participants develop a <a href="https://lennartwittkuhn.com/recipes/">version-controlled online recipes book</a>. While this project may appear trivial or unscientific, it effectively teaches critical skills in file management and the development of computational notebooks in a fun and engaging way. These skills are directly transferable to academic tasks, such as thesis projects.</p>
+<p>In addition, <em>Quizzes</em> (ca. 10 minutes) are offered bi-weekly to help students assess their progress toward the learning objectives. A <a href="https://version-control-intro.formr.org/">pre-course survey</a> collects information on prior experience with relevant tools, expectations, concerns, and motivations. All surveys are built using the open-source survey framework <a href="https://formr.org/">formr</a> <span class="citation" data-cites="arslan2019">(<a href="#ref-arslan2019" role="doc-biblioref">Arslan et al., 2019</a>)</span>, an open-source alternative to proprietary tools like <a href="https://psyunihamburg.eu.qualtrics.com/login">Qualtrics</a>, with <a href="https://github.com/lnnrtwttkhn/version-control-survey">survey code</a> openly shared. Survey data is analyzed to identify common errors or misunderstandings, which are addressed in subsequent sessions and guide further development of the course materials.</p>
+<p>The course also integrates several technical components alongside this core structure. Each session includes clear <a href="https://lennartwittkuhn.com/version-control-book/misc/objectives.html">learning objectives</a>. <a href="https://lennartwittkuhn.com/version-control-book/misc/exercises.html">Exercises</a> are divided into mandatory and optional tasks, with example solutions and a clean project folder available for download. <a href="https://lennartwittkuhn.com/version-control-book/misc/cheatsheet.html">Cheatsheets</a> provide a quick reference for commands introduced in each session. Additionally, we use <a href="https://plausible.io/">Plausible</a>, an open-source, GDPR-compliant web analytics tool, to track resource use and analyze online interactions.</p>
+<div style="page-break-after: always;"></div>
+</section>
+</section>
+<section id="reference-to-teaching-award-criteria" class="level2">
+<h2 class="anchored" data-anchor-id="reference-to-teaching-award-criteria">Reference to teaching award criteria</h2>
+<section id="student-centering" class="level3">
+<h3 class="anchored" data-anchor-id="student-centering">Student centering</h3>
+<p>With most class time dedicated to hands-on exercises, active participation is key to the course. Students can approach tasks in their preferred learning style and allocate time for reading, exercises, and quizzes as needed. This flexibility is balanced by clear task goals and learning objectives, providing reassuring structure and guidance. All materials (course website, online textbook) are openly accessible, supporting asynchronous self-study. Students can review content, complete assignments, and take quizzes at their own pace, even outside class hours. Developing a version-controlled online recipes book as a computational notebook combines skill-building with a fun project, boosting motivation and practicing skills that can transfer beyond the course.</p>
+</section>
+<section id="connection-of-scientific-and-practical-relevance" class="level3">
+<h3 class="anchored" data-anchor-id="connection-of-scientific-and-practical-relevance">Connection of scientific and practical relevance</h3>
+<p>The seminar bridges theory and practice through hands-on training in version control with Git, a tool of growing importance in academic research. Students also learn theoretical concepts related to reproducibility and best scientific practices for managing programming code and research data. These skills are increasingly vital in psychological research and highly applicable across various career fields where data-driven decision-making is essential.</p>
+</section>
+<section id="topicality-and-degree-of-innovation" class="level3">
+<h3 class="anchored" data-anchor-id="topicality-and-degree-of-innovation">Topicality and degree of innovation</h3>
+<p>Against the backdrop of the reproducibility crisis, particularly in psychological research <span class="citation" data-cites="crüwell2023 hardwicke2021 obels2020">(e.g., <a href="#ref-crüwell2023" role="doc-biblioref">Crüwell et al., 2023</a>; <a href="#ref-hardwicke2021" role="doc-biblioref">Hardwicke et al., 2021</a>; <a href="#ref-obels2020" role="doc-biblioref">Obels et al., 2020</a>)</span>, this seminar addresses a pressing need by introducing students to transparent, reproducible workflows - a cornerstone of open science. The seminar’s innovation lies in both its subject matter and execution. All teaching materials are open-source educational resources, created using innovative tools and by the same principles taught in the course. Adopting a “working in the open” approach, the seminar enables transparency and collaboration throughout, from initial conception to implementation in programming code. Recognizing these efforts, the project received funding to generalize and promote this <a href="https://lennartwittkuhn.com/fair-teaching-proposal/">approach to FAIR and reproducible teaching</a>.</p>
+</section>
+<section id="promoting-research-based-learning-and-critical-thinking" class="level3">
+<h3 class="anchored" data-anchor-id="promoting-research-based-learning-and-critical-thinking">Promoting research-based learning and critical thinking</h3>
+<p>The seminar concept draws on on the Scholarship of Teaching approach <span class="citation" data-cites="hutchings1999">(<a href="#ref-hutchings1999" role="doc-biblioref">Hutchings &amp; Shulman, 1999</a>)</span>, which emphasizes reflecting on teaching practices from a research perspective. A comprehensive questionnaire at the start captures students’ prior knowledge, motivation, concerns, and expectations. Key concepts are assessed every other session to monitor understanding. Systematic versioning of all resources allows to identify connections between students’ knowledge and the evolution of materials, even retrospectively. Combined with web analytics, this enables data-driven improvements to refine resources and teaching strategies. The seminar encourages students to critically assess current scientific practices, focusing on transparency, effectiveness, and collaboration.</p>
+</section>
+<section id="feedback-culture" class="level3">
+<h3 class="anchored" data-anchor-id="feedback-culture">Feedback Culture</h3>
+<p>Students can influence the seminar’s progression through questions and feedback at any time. Additionally, the course teaches the tools (primarily <a href="https://git-scm.com/">Git</a>, <a href="https://github.com/">GitHub</a>, and <a href="https://quarto.org/">Quarto</a>) used to create the course materials. As all materials are open-source, students are encouraged to contribute directly to the resources. For example, students <a href="https://github.com/lnnrtwttkhn/version-control-course-uhh-ss24/issues?q=label%3Afeedback">provided feedback via GitHub</a>, and one student <a href="https://github.com/lnnrtwttkhn/version-control-book/pull/200">fixed a typo in the Version Control Book</a>, demonstrating the principles taught in the course.</p>
+</section>
+<section id="promotion-of-equality" class="level3">
+<h3 class="anchored" data-anchor-id="promotion-of-equality">Promotion of equality</h3>
+<p>We emphasize social elements of the learning experience, fostering a welcoming environment where participants follow a <a href="https://lennartwittkuhn.com/version-control-course-uhh-ws23/code-of-conduct.html">code of conduct</a>. Collaborative learning is encouraged through exercises, and to accommodate students’ workloads, course content is designed to be largely covered during class time. All coursework is clearly outlined, establishing fairness and transparency while making it easy to catch up on missed sessions. Quarto’s modern framework also includes accessibility features, such as alternative text for images and hyperlegible font, to support individuals with visual impairments. The tools taught in the course are free, open-source, and compatible with all major operating systems, avoiding reliance on proprietary, costly software.</p>
+</section>
+<section id="internal-differentiation" class="level3">
+<h3 class="anchored" data-anchor-id="internal-differentiation">Internal Differentiation</h3>
+<p>Differentiation is achieved by allowing students to study materials at their own pace. They can pair with peers at varying learning stages, creating diverse learning interactions. The concept of pair programming is also implemented, encouraging students to support each other in completing tasks. Advanced students can share their knowledge, reinforcing their understanding while taking on a teaching role. Tasks are divided into mandatory and optional components. Mandatory tasks are designed for all students, while optional exercises offer deeper engagement with the content. The chapters of the Version Control Book are structured to be completed during class, but also offer expandable sections and cross-references providing additional background for deeper exploration of the topics.</p>
+</section>
+<section id="interdisciplinarity" class="level3">
+<h3 class="anchored" data-anchor-id="interdisciplinarity">Interdisciplinarity</h3>
+<p>The course is interdisciplinary, with students with diverse interests in psychological research, as revealed by our pre-course survey. Despite the varied research focuses, the core skills taught - version control, reproducibility, and collaboration - are universally applicable across disciplines. The course provides a common framework for managing research data, sharing code, and enabling transparency and effective collaboration in scientific practices. These skills are valuable not only in Psychology but also in any research field or industry where data-driven decision-making and collaboration are key.</p>
+</section>
+<section id="internationalization" class="level3">
+<h3 class="anchored" data-anchor-id="internationalization">Internationalization</h3>
+<p>All course materials (website, book, slides) are available in English. With support from the University of Hamburg, the <a href="https://lennartwittkuhn.com/version-control-course-uhh-eur-ws24/">third version of the course</a> is being offered as part of an international teaching collaboration between the University of Hamburg and Erasmus University Rotterdam. This partnership provides students from both institutions the opportunity for both knowledge and cultural exchange. Website usage data of the Version Control Book shows over unique 100,000 users from more than 30 countries.</p>
+</section>
+<section id="media-use" class="level3">
+<h3 class="anchored" data-anchor-id="media-use">Media use</h3>
+<p>While the course materials focus on <em>digital media</em>, they provide a wide range of resources. These include course websites with slides, the comprehensive Version Control Book, and online quizzes. All materials are fully open-source and rely on open-source tools, ensuring high potential for interoperability and reusability - key elements of the FAIR principles <span class="citation" data-cites="wilkinson2016">(<a href="#ref-wilkinson2016" role="doc-biblioref">Wilkinson et al., 2016</a>)</span>. Major releases are tagged, annotated with metadata, and archived in repositories like <a href="https://zenodo.org/">Zenodo</a>, ensuring long-term accessibility. This course thereby exemplifies an approach to FAIR and collaborative development of educational materials <span class="citation" data-cites="garcia2020">(cf. <a href="#ref-garcia2020" role="doc-biblioref">Garcia et al., 2020</a>)</span>, opening new avenues for participatory and adaptable teaching methods.</p>
+</section>
+<section id="evaluation-results" class="level3">
+<h3 class="anchored" data-anchor-id="evaluation-results">Evaluation results</h3>
+<p>Evaluation results were provided with the initial application.</p>
+<div style="page-break-after: always;"></div>
+</section>
+</section>
+<section id="appendix" class="level2">
+<h2 class="anchored" data-anchor-id="appendix">Appendix</h2>
+<section id="acknowledgements" class="level3">
+<h3 class="anchored" data-anchor-id="acknowledgements">Acknowledgements</h3>
+<p>This project was funded by the <a href="https://www.isa.uni-hamburg.de/en/ddlitlab.html">Digital and Data Literacy in Teaching Lab (DDLitLab)</a>, an initiative by the <a href="https://www.isa.uni-hamburg.de/">ISA-Zentrum</a> at the <a href="https://www.uni-hamburg.de/en.html">University of Hamburg</a>. The Digital and Data Literacy in Teaching Lab program is in turn funded by the <a href="https://stiftung-hochschullehre.de/en/">Stiftung Innovation in der Hochschullehre</a>. The project was also funded by the Federal Ministry of Education and Research (BMBF) and the Free and Hanseatic City of Hamburg under the Excellence Strategy of the Federal Government and the Länder as part of the <a href="https://www.uni-hamburg.de/en/internationales/mitarbeitende/mitarbeitende-wissenschaft/foerderprogramme-austauschprogramme-gesamt/internationale-lehr-und-lernformate-at-home.html">International Teaching and Learning Formats (ILLF@home) program</a> at <a href="https://www.uni-hamburg.de/en.html">University of Hamburg</a>.</p>
+</section>
+<section id="teaching-award-criteria" class="level3">
+<h3 class="anchored" data-anchor-id="teaching-award-criteria">Teaching Award Criteria</h3>
+<p>Student centering (e.g.&nbsp;promote active participation and engagement, encourage self-study, motivate, enable participation), teaching skills (e.g.&nbsp;understandable communication, commitment, professional competence), connection of scientific and practical relevance, topicality and degree of innovation, research-based learning, stimulate critical thinking, feedback culture, promotion of equality, internal differentiation, interdisciplinarity, internationalization, media use, evaluation results (<a href="https://www.psy.uni-hamburg.de/en/ueber-das-institut/lehrpreis-psychologie.html">Source</a>).</p>
+</section>
+</section>
+<section id="references" class="level2">
+<h2 class="anchored" data-anchor-id="references">References</h2>
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-arslan2019" class="csl-entry" role="listitem">
+Arslan, R. C., Walther, M. P., &amp; Tata, C. S. (2019). formr: A study framework allowing for automated feedback generation and complex longitudinal experience-sampling studies using R. <em>Behavior Research Methods</em>, <em>52</em>(1), 376–387. <a href="https://doi.org/10.3758/s13428-019-01236-y">https://doi.org/10.3758/s13428-019-01236-y</a>
+</div>
+<div id="ref-crüwell2023" class="csl-entry" role="listitem">
+Crüwell, S., Apthorp, D., Baker, B. J., Colling, L., Elson, M., Geiger, S. J., Lobentanzer, S., Monéger, J., Patterson, A., Schwarzkopf, D. S., Zaneva, M., &amp; Brown, N. J. L. (2023). What<span>’</span>s in a Badge? A Computational Reproducibility Investigation of the Open Data Badge Policy in One Issue of <span><em>Psychological Science</em></span>. <em>Psychological Science</em>, <em>34</em>(4), 512–522. <a href="https://doi.org/10.1177/09567976221140828">https://doi.org/10.1177/09567976221140828</a>
+</div>
+<div id="ref-garcia2020" class="csl-entry" role="listitem">
+Garcia, L., Batut, B., Burke, M. L., Kuzak, M., Psomopoulos, F., Arcila, R., Attwood, T. K., Beard, N., Carvalho-Silva, D., Dimopoulos, A. C., Angel, V. D. del, Dumontier, M., Gurwitz, K. T., Krause, R., McQuilton, P., Le Pera, L., Morgan, S. L., Rauste, P., Via, A., … Palagi, P. M. (2020). Ten simple rules for making training materials FAIR. <em>PLOS Computational Biology</em>, <em>16</em>(5), e1007854. <a href="https://doi.org/10.1371/journal.pcbi.1007854">https://doi.org/10.1371/journal.pcbi.1007854</a>
+</div>
+<div id="ref-hardwicke2021" class="csl-entry" role="listitem">
+Hardwicke, T. E., Bohn, M., MacDonald, K., Hembacher, E., Nuijten, M. B., Peloquin, B. N., deMayo, B. E., Long, B., Yoon, E. J., &amp; Frank, M. C. (2021). Analytic reproducibility in articles receiving open data badges at the journal <span><em>Psychological Science</em></span>: An observational study. <em>Royal Society Open Science</em>, <em>8</em>(1). <a href="https://doi.org/10.1098/rsos.201494">https://doi.org/10.1098/rsos.201494</a>
+</div>
+<div id="ref-hutchings1999" class="csl-entry" role="listitem">
+Hutchings, P., &amp; Shulman, L. S. (1999). The Scholarship of Teaching:<span><em>New Elaborations, New Developments</em></span>. <em>Change: The Magazine of Higher Learning</em>, <em>31</em>(5), 10–15. <a href="https://doi.org/10.1080/00091389909604218">https://doi.org/10.1080/00091389909604218</a>
+</div>
+<div id="ref-obels2020" class="csl-entry" role="listitem">
+Obels, P., Lakens, D., Coles, N. A., Gottfried, J., &amp; Green, S. A. (2020). Analysis of Open Data and Computational Reproducibility in Registered Reports in Psychology. <em>Advances in Methods and Practices in Psychological Science</em>, <em>3</em>(2), 229–237. <a href="https://doi.org/10.1177/2515245920918872">https://doi.org/10.1177/2515245920918872</a>
+</div>
+<div id="ref-wilkinson2016" class="csl-entry" role="listitem">
+Wilkinson, M. D., Dumontier, M., Aalbersberg, Ij. J., Appleton, G., Axton, M., Baak, A., Blomberg, N., Boiten, J.-W., Silva Santos, L. B. da, Bourne, P. E., Bouwman, J., Brookes, A. J., Clark, T., Crosas, M., Dillo, I., Dumon, O., Edmunds, S., Evelo, C. T., Finkers, R., … Mons, B. (2016). The FAIR Guiding Principles for scientific data management and stewardship. <em>Scientific Data</em>, <em>3</em>(1). <a href="https://doi.org/10.1038/sdata.2016.18">https://doi.org/10.1038/sdata.2016.18</a>
+</div>
+<div id="ref-williams2001" class="csl-entry" role="listitem">
+Williams, L. (2001). Integrating pair programming into a software development process. <em>Proceedings 14th Conference on Software Engineering Education and Training. ’In Search of a Software Engineering Profession’ (Cat. No.PR01059)</em>. <a href="https://doi.org/10.1109/csee.2001.913816">https://doi.org/10.1109/csee.2001.913816</a>
+</div>
+</div>
+
+
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></div></div></section></div></main> <!-- /main -->
+<script defer="" data-domain="lennartwittkuhn.com/version-control-course-concept" src="https://plausible.io/js/script.js"></script>
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+  const viewSource = window.document.getElementById('quarto-view-source') ||
+                     window.document.getElementById('quarto-code-tools-source');
+  if (viewSource) {
+    const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+    viewSource.addEventListener("click", function(e) {
+      if (sourceUrl) {
+        // rstudio viewer pane
+        if (/\bcapabilities=\b/.test(window.location)) {
+          window.open(sourceUrl);
+        } else {
+          window.location.href = sourceUrl;
+        }
+      } else {
+        const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+        modal.show();
+      }
+      return false;
+    });
+  }
+  function toggleCodeHandler(show) {
+    return function(e) {
+      const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
+      for (let i=0; i<detailsSrc.length; i++) {
+        const details = detailsSrc[i].parentElement;
+        if (show) {
+          details.open = true;
+        } else {
+          details.removeAttribute("open");
+        }
+      }
+      const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+      const fromCls = show ? "hidden" : "unhidden";
+      const toCls = show ? "unhidden" : "hidden";
+      for (let i=0; i<cellCodeDivs.length; i++) {
+        const codeDiv = cellCodeDivs[i];
+        if (codeDiv.classList.contains(fromCls)) {
+          codeDiv.classList.remove(fromCls);
+          codeDiv.classList.add(toCls);
+        } 
+      }
+      return false;
+    }
+  }
+  const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+  if (hideAllCode) {
+    hideAllCode.addEventListener("click", toggleCodeHandler(false));
+  }
+  const showAllCode = window.document.getElementById("quarto-show-all-code");
+  if (showAllCode) {
+    showAllCode.addEventListener("click", toggleCodeHandler(true));
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+          // target, if specified
+          link.setAttribute("target", "_blank");
+          if (link.getAttribute("rel") === null) {
+            link.setAttribute("rel", "noopener");
+          }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+<script src="site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>
