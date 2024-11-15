@@ -3,8 +3,9 @@ date: 2024-11-15
 engine: knitr
 ---
 
-::: {.callout-note}
+::: {.callout-note appearance="simple"}
 This concept paper summarizes content, structure and didactic methods of the full-semester course "{{< var project.title >}}" by [{{< var project.author>}}]({{< var project.homepage >}}).
+An online version is available at [{{< var project.website >}}]({{< var project.website >}}).
 It was prepared for the Teaching Award 2024 at the Institute of Psychology, University of Hamburg.
 More details about the course and teaching approach can be found in this [project description]({{< var links.ddlitlab-description >}}), this [project report]({{< var links.ddlitlab-report >}}) and a [20-minute video interview]({{< var links.video-interview >}}).
 Hyperlinks are highlighted in blue.
@@ -140,13 +141,11 @@ This approach opens new opportunities for participatory and adaptable teaching m
 
 This project was funded by the [Digital and Data Literacy in Teaching Lab (DDLitLab)](https://www.isa.uni-hamburg.de/en/ddlitlab.html), an initiative by the [ISA-Zentrum](https://www.isa.uni-hamburg.de/) at the [University of Hamburg](https://www.uni-hamburg.de/en.html).
 The Digital and Data Literacy in Teaching Lab program is in turn funded by the [Stiftung Innovation in der Hochschullehre](https://stiftung-hochschullehre.de/en/) (details can be found [here](https://stiftung-hochschullehre.de/projekt/ddlitlab/)).
-Additionally, the project is currently funded by the Federal Ministry of Education and Research (BMBF) and the Free and Hanseatic City of Hamburg under the Excellence Strategy of the Federal Government and the Länder as part of the [International Teaching and Learning Formats (ILLF@home) program](https://www.uni-hamburg.de/en/internationales/mitarbeitende/mitarbeitende-wissenschaft/foerderprogramme-austauschprogramme-gesamt/internationale-lehr-und-lernformate-at-home.html) at [University of Hamburg](https://www.uni-hamburg.de/en.html).
+Additionally, the project was funded by the Federal Ministry of Education and Research (BMBF) and the Free and Hanseatic City of Hamburg under the Excellence Strategy of the Federal Government and the Länder as part of the [International Teaching and Learning Formats (ILLF@home) program](https://www.uni-hamburg.de/en/internationales/mitarbeitende/mitarbeitende-wissenschaft/foerderprogramme-austauschprogramme-gesamt/internationale-lehr-und-lernformate-at-home.html) at [University of Hamburg](https://www.uni-hamburg.de/en.html).
 
 ### Teaching Award Criteria
 
-Student centering (e.g. promote active participation and engagement, encourage self-study, motivate, enable participation), teaching skills (e.g. understandable communication, commitment, professional competence), connection of scientific and practical relevance, topicality and degree of innovation, research-based learning, stimulate critical thinking, feedback culture, promotion of equality, internal differentiation, interdisciplinarity, internationalization, media use, evaluation results
-
-[Source]({{< var links.award-criteria >}})
+Student centering (e.g. promote active participation and engagement, encourage self-study, motivate, enable participation), teaching skills (e.g. understandable communication, commitment, professional competence), connection of scientific and practical relevance, topicality and degree of innovation, research-based learning, stimulate critical thinking, feedback culture, promotion of equality, internal differentiation, interdisciplinarity, internationalization, media use, evaluation results ([Source]({{< var links.award-criteria >}})).
 
 ## References
 
