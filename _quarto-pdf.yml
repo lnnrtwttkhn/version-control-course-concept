@@ -3,7 +3,7 @@ format:
     title: |
       "{{< var project.title >}}"\newline{}
       {{< var project.subtitle >}}\newline{}
-      {{< var project.author >}} | 2024-11-15
+      {{< var project.author >}}, 2024-11-15
     # table of contents:
     toc: false
     include-in-header:
