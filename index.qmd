@@ -125,7 +125,7 @@ These skills are valuable not only in Psychology but also in any research field 
 All course materials (website, book, slides) are available in English.
 With support from the University of Hamburg, the [third version of the course]({{< var links.website-ws24 >}}) is being offered as part of an international teaching collaboration between the University of Hamburg and Erasmus University Rotterdam.
 This partnership provides students from both institutions the opportunity for both knowledge and cultural exchange.
-Website usage data of the Version Control Book shows over unique 100,000 users from more than 30 countries.
+Website usage data of the Version Control Book shows over 1,000 unique users from more than 30 countries.
 
 ### Media use
 
