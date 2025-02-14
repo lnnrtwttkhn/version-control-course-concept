@@ -1,5 +1,6 @@
 # Version Control Course Concept
 
+[![DOI](https://www.fdr.uni-hamburg.de/badge/DOI/10.25592/uhhfdm.16245.svg)](https://doi.org/10.25592/uhhfdm.16245)
 [![Quarto Publish](https://github.com/lnnrtwttkhn/version-control-course-concept/actions/workflows/publish.yml/badge.svg)](https://github.com/lnnrtwttkhn/version-control-course-concept/actions/workflows/publish.yml)
 [![Codespell](https://github.com/lnnrtwttkhn/version-control-course-concept/actions/workflows/codespell.yml/badge.svg)](https://github.com/lnnrtwttkhn/version-control-course-concept/actions/workflows/codespell.yml)
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
