@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.57">
+<meta name="generator" content="quarto-1.6.40">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -56,10 +56,10 @@ div.csl-indent {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-9e228d6d4d66c12a9d11739da31c2b1c.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-7fb61b21474f6549c5007a5200c2bc35.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -189,7 +189,7 @@ div.csl-indent {
 <i class="callout-icon"></i>
 </div>
 <div class="callout-body-container">
-<p>This concept paper summarizes content, structure, and didactic methods of the full-semester course “Track, organize and share your work: An introduction to Git for research” by <a href="https://lennartwittkuhn.com/">Dr.&nbsp;Lennart Wittkuhn</a>. An online version is available at <a href="https://lennartwittkuhn.com/version-control-course-concept">https://lennartwittkuhn.com/version-control-course-concept</a>. A PDF version is archived at <a href="https://doi.org/10.25592/uhhfdm.16245">doi: 10.25592/uhhfdm.16245</a>. It was prepared for the Teaching Award 2024 at the Institute of Psychology, University of Hamburg. More details about the course can also be found in this <a href="https://www.isa.uni-hamburg.de/en/ddlitlab/data-literacy-lehrlabor/zweite-foerderrunde/06-git.html">project description</a>, this <a href="https://lennartwittkuhn.com/ddlitlab-report/">project report</a>, and a <a href="https://lecture2go.uni-hamburg.de/l2go/-/get/v/70364">20-minute video interview</a>. Links to external resources are highlighted in blue.</p>
+<p>This concept paper summarizes content, structure, and didactic methods of the full-semester course “Track, organize and share your work: An introduction to Git for research” by <a href="https://lennartwittkuhn.com/">Dr.&nbsp;Lennart Wittkuhn</a>. An online version is available at <a href="https://lennartwittkuhn.com/version-control-course-concept">https://lennartwittkuhn.com/version-control-course-concept</a>. A PDF version is archived at <a href="https://doi.org/10.25592/uhhfdm.16783">doi: 10.25592/uhhfdm.16783</a>. It was prepared for the Teaching Award 2024 at the Institute of Psychology, University of Hamburg. More details about the course can also be found in this <a href="https://www.isa.uni-hamburg.de/en/ddlitlab/data-literacy-lehrlabor/zweite-foerderrunde/06-git.html">project description</a>, this <a href="https://lennartwittkuhn.com/ddlitlab-report/">project report</a>, and a <a href="https://lecture2go.uni-hamburg.de/l2go/-/get/v/70364">20-minute video interview</a>. Links to external resources are highlighted in blue.</p>
 </div>
 </div>
 </div>
@@ -245,7 +245,7 @@ div.csl-indent {
 </section>
 <section id="internationalization" class="level3">
 <h3 class="anchored" data-anchor-id="internationalization">Internationalization</h3>
-<p>All course materials (website, book, slides) are available in English. With support from the University of Hamburg, the <a href="https://lennartwittkuhn.com/version-control-course-uhh-eur-ws24/">third version of the course</a> is being offered as part of an international teaching collaboration between the University of Hamburg and Erasmus University Rotterdam. This partnership provides students from both institutions the opportunity for both knowledge and cultural exchange. Website usage data of the Version Control Book shows over unique 100,000 users from more than 30 countries.</p>
+<p>All course materials (website, book, slides) are available in English. With support from the University of Hamburg, the <a href="https://lennartwittkuhn.com/version-control-course-uhh-eur-ws24/">third version of the course</a> is being offered as part of an international teaching collaboration between the University of Hamburg and Erasmus University Rotterdam. This partnership provides students from both institutions the opportunity for both knowledge and cultural exchange. Website usage data of the Version Control Book shows over 1,000 unique users from more than 30 countries.</p>
 </section>
 <section id="media-use" class="level3">
 <h3 class="anchored" data-anchor-id="media-use">Media use</h3>
@@ -380,8 +380,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   });
   clipboard.on('success', onCopySuccess);
   if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-    // For code content inside modals, clipBoardJS needs to be initialized with a container option
-    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
     const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
       text: getTextToCopy,
       container: window.document.getElementById('quarto-embedded-source-code-modal')
@@ -548,7 +546,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
-      // TODO in 1.5, we should make sure this works without a callout special case
       if (note.classList.contains("callout")) {
         return note.outerHTML;
       } else {
